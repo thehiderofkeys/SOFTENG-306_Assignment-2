@@ -27,8 +27,10 @@ public class PlayerController : MonoBehaviour
 
         var inputX = Input.GetAxis("Horizontal");
         var inputY = Input.GetAxis("Vertical");
-     
+        var movementX = inputX * speedX;
+        rb.velocity = new Vector3(movementX, rb.velocity.y);
 
+        //rb.AddForce(new Vector2(100, 0)); 
         
 
         //rb.velocity = velocity;
