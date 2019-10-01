@@ -36,4 +36,18 @@ public class PlayerController : MonoBehaviour
         //rb.velocity = velocity;
         //transform.Translate(velocity * Time.deltaTime);
     }
+
+    bool isOnGround()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
+        if (hit.collider != null)
+        {
+            float distance = Mathf.Abs(hit.point.y - transform.position.y);
+            if (distance < DIST_FLOOR + DIST_THRESH)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
