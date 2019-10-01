@@ -1,0 +1,37 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+// Code modified from
+public class PlayerController : MonoBehaviour
+{
+   
+    private float speedX = 2f;
+    private float speedY = 2.5f;
+
+    private Rigidbody2D rb;
+    private Vector3 checkpoint;
+    private Vector3 startPosition;
+
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        startPosition = transform.position;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        var inputX = Input.GetAxis("Horizontal");
+        var inputY = Input.GetAxis("Vertical");
+     
+
+        
+
+        //rb.velocity = velocity;
+        //transform.Translate(velocity * Time.deltaTime);
+    }
+}
