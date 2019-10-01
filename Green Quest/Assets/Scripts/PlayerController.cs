@@ -26,7 +26,9 @@ public class PlayerController : MonoBehaviour
         Vector2 velocity = rb.velocity;
         var inputX = Input.GetAxis("Horizontal");
         var inputY = Input.GetAxis("Vertical");
+        if (!isContact(new Vector2(-inputX,0).normalized)){
             velocity.x = 5f * inputX;
+        }
         if (inputY > 0.2 && isContact(Vector2.up)){
             velocity.y = 12f;
         }
