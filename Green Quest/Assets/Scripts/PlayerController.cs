@@ -5,16 +5,15 @@ using UnityEngine;
 // Code modified from
 public class PlayerController : MonoBehaviour
 {
-   
+    public LayerMask groundLayer;
     private float speedX = 2f;
     private float speedY = 2.5f;
 
     private Rigidbody2D rb;
     private Vector3 checkpoint;
     private Vector3 startPosition;
-
-    
     // Start is called before the first frame update
+    private ContactPoint2D[] points = new ContactPoint2D[20];
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,30 +23,30 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Vector2 velocity = rb.velocity;
         var inputX = Input.GetAxis("Horizontal");
         var inputY = Input.GetAxis("Vertical");
-        var movementX = inputX * speedX;
-        rb.velocity = new Vector3(movementX, rb.velocity.y);
 
-        //rb.AddForce(new Vector2(100, 0)); 
-        
+        if (!isContact(new Vector2(-inputX,0).normalized)){
+            velocity.x = 5f * inputX;
+        }
+        if (inputY > 0.2 && isContact(Vector2.up)){
+            velocity.y = 12f;
+        }
 
-        //rb.velocity = velocity;
-        //transform.Translate(velocity * Time.deltaTime);
+        rb.velocity = velocity;
+
     }
 
-    bool isOnGround()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
-        if (hit.collider != null)
+    bool isContact(Vector2 normal){
+        int count = rb.GetContacts(points);
+        for(int i=0;i < count; i++)
         {
-            float distance = Mathf.Abs(hit.point.y - transform.position.y);
-            if (distance < DIST_FLOOR + DIST_THRESH)
-            {
+            if (Vector2.Dot(points[i].normal,normal) > 0.9){
                 return true;
             }
         }
         return false;
     }
+
 }
