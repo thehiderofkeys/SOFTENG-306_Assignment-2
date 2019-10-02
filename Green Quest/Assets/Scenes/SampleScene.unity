@@ -480,8 +480,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1368611988}
-  min: -3
-  max: 3
+  minX: -3
+  maxX: 3
+  minY: -3
+  maxY: 3
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
