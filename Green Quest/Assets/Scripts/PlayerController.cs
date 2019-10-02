@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         Vector2 velocity = rb.velocity;
         var inputX = Input.GetAxis("Horizontal");
         var inputY = Input.GetAxis("Vertical");
+
         if (!isContact(new Vector2(-inputX,0).normalized)){
             velocity.x = 5f * inputX;
         }
@@ -35,8 +36,6 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = velocity;
 
-        //rb.velocity = velocity;
-        //transform.Translate(velocity * Time.deltaTime);
     }
 
     bool isContact(Vector2 normal){
