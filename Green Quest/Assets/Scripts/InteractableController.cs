@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractableController : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class InteractableController : MonoBehaviour
     private Sprite oldSprite;
     private Sprite temp;
     private SpriteRenderer renderer;
+    public UnityEvent OnEvent;
+    public UnityEvent OffEvent;
+    public bool State;
 
     // Start is called before the first frame update
     void Start()
@@ -37,12 +41,15 @@ public class InteractableController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                oldSprite = renderer.sprite;
-                print("space key was pressed");
-                renderer.sprite = newSprite;
-                temp = newSprite;
-                newSprite = oldSprite;
-                oldSprite = temp;
+                if (State)
+                {
+                    OffEvent.Invoke();
+                }
+                else
+                {
+                    OnEvent.Invoke();
+                }
+                State = !State;
             }
         }
     }
