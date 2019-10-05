@@ -13,12 +13,16 @@ public class Level : MonoBehaviour{
     public string successExitScreen;
     public string failExitScreen;
 
+
     public ParallaxElement[] parallaxElements;
     private Vector3 cameraStartPosition;
     // Start is called before the first frame update
     void Start(){
         cameraStartPosition = Camera.main.transform.position;
     }
+
+
+   
 
     // Update is called once per frame
     void Update() {
@@ -28,12 +32,24 @@ public class Level : MonoBehaviour{
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+   
+    public void ExitMenu()
     {
-        if (collider.gameObject.tag == "Player")
+        
+                SceneManager.LoadScene(successExitScreen);
+                
+           
+    }
+
+    public void Respawn()
+    {
+        GameObject[] obj = GameObject.FindGameObjectsWithTag("Player");
+
+        if (obj.Length > 0)
         {
-            SceneManager.LoadScene(successExitScreen);
-            print("yessssss");
+            obj[0].transform.SetPositionAndRotation(new Vector3(-3, -1, 0), new Quaternion(0,0,0,0));
         }
     }
+   
+
 }

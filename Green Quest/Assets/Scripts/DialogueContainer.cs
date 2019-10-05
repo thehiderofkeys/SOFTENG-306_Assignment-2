@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class DialogueContainer : MonoBehaviour
 {
     public TextAsset DialogFile;
-    public Button NextButton;
+    public GameObject DialoguePanel;
     public Text DialogUI;
     public UnityEvent OnEnd;
     public DialogueEvent[] events;
@@ -41,26 +41,28 @@ public class DialogueContainer : MonoBehaviour
             foreach(DialogueEvent dialogueEvent in events){
                 if(dialogueEvent.Name == eventName)
                 {
-                    NextButton.gameObject.SetActive(false);
                     dialogueEvent.onRead.Invoke();
                     StartCoroutine(PauseForEffect(dialogueEvent.Duration));
+                    return;
                 }
             }
+            Debug.LogError("EVENT NOT FOUND");
+            Next();
         }
         else
         {
+            DialoguePanel.SetActive(true);
             string Name = "";
             foreach(DialogueCharacter character in characters){
                 character.CharacterImage.SetActive(string.Equals(character.id,id));
                 Name = character.Name + ": ";
             }
-            DialogUI.text = Name+Dialogs[currLine++];
+            DialogUI.text = Name+Dialogs[currLine++].Replace("$NAME$","Place Holder Name");
         }
     }
     public IEnumerator PauseForEffect(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        NextButton.gameObject.SetActive(true);
         Next();
     }
     public static string ReplaceAllWhiteSpaces(string str)

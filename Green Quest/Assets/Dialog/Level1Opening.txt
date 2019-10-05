@@ -1,7 +1,5 @@
 Event
 Opening
-Event
-DialogueStart
 P
 H-Hello? Is there anyone there? 
 P
@@ -9,7 +7,7 @@ P
 Event 
 GretaApperance
 G
-Hello ____, do not be frightened it is just me Greta the Wizard.
+Hello $NAME$, do not be frightened it is just me Greta the Wizard.
 Event
 MusicStart
 P
@@ -19,7 +17,7 @@ I am sorry if I startled you but there is no need to be worried about my intenti
 P
 Help me? Why me? I think I'll be ok without the help of a stranger.
 G
-It's not just you ____ but the whole world needs your help. In the future there is a mysterious evil force that ruins the whole planet. It becomes . . . uninhabitable to all. The only way to stop it is for you to act now, in the present before it's too late. 
+It's not just you $NAME$, but the whole world needs your help. In the future there is a mysterious evil force that ruins the whole planet. It becomes . . . uninhabitable to all. The only way to stop it is for you to act now, in the present before it's too late. 
 P
 Oh wow that sounds pretty terrible. But why me? What can I possibly do to help? I am just a kid, shouldn't more powerful people be trying to help?
 G
