@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AchievementController))]
 public class Level : MonoBehaviour{
     [System.Serializable]
     public class ParallaxElement{
@@ -12,6 +13,7 @@ public class Level : MonoBehaviour{
     }
     public string successExitScreen;
     public string failExitScreen;
+    public Level level;
 
     public ParallaxElement[] parallaxElements;
     private Vector3 cameraStartPosition;
@@ -28,12 +30,17 @@ public class Level : MonoBehaviour{
         }
     }
 
+   
     void OnTriggerEnter2D(Collider2D collider)
     {
+        // Player's tag is player, so when the player collides with this object, it will load the exit script.
         if (collider.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(successExitScreen);
-            print("yessssss");
+            if (GetComponent<AchievementController>().IsComplete())
+            {
+                SceneManager.LoadScene(successExitScreen);
+                print("yessssss");
+            }
         }
     }
 }
