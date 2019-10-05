@@ -11,13 +11,15 @@ public class DialogueContainer : MonoBehaviour
     public TextAsset DialogFile;
     public GameObject DialoguePanel;
     public Text DialogUI;
+    public UnityEvent OnStart;
     public UnityEvent OnEnd;
     public DialogueEvent[] events;
     public DialogueCharacter[] characters;
-    public string[] Dialogs;
+    private string[] Dialogs;
     private int currLine = 0;
     void OnEnable()
     {
+        OnStart.Invoke();
         Dialogs = System.Text.Encoding.Default.GetString(DialogFile.bytes).Split('\n');
         currLine = 0;
         Next();
