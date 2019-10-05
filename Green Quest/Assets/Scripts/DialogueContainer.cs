@@ -57,7 +57,8 @@ public class DialogueContainer : MonoBehaviour
             string Name = "";
             foreach(DialogueCharacter character in characters){
                 character.CharacterImage.SetActive(string.Equals(character.id,id));
-                Name = character.Name + ": ";
+                if(string.Equals(character.id, id))
+                    Name = character.Name + ": ";
             }
             DialogUI.text = Name+Dialogs[currLine++].Replace("$NAME$","Place Holder Name");
         }
