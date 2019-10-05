@@ -869,6 +869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   successExitScreen: SuccessExitScreen
   failExitScreen: FailExitScreen
+  level: {fileID: 0}
   parallaxElements:
   - background: {fileID: 732145399}
     seperation: 0.2
