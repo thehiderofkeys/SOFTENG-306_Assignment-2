@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     private float speedX = 2f;
     private float speedY = 2.5f;
+    public Animator animator;
 
     private Rigidbody2D rb;
     private Vector3 checkpoint;
@@ -18,6 +19,9 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
+        animator.SetBool("Jump", false);
+        animator.SetBool("Fall", false);
+
     }
 
     // Update is called once per frame
@@ -36,6 +40,26 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = velocity;
 
+        animator.SetFloat("Speed", Mathf.Abs(velocity.x));
+        if (velocity.y > 0)
+        {
+            animator.SetBool("Jump", true);
+            animator.SetBool("Fall", false);
+        } else if (velocity.y < 0)
+        {
+            animator.SetBool("Jump", false);
+            animator.SetBool("Fall", true);
+        }
+        else
+        {
+            animator.SetBool("Jump", false);
+            animator.SetBool("Fall", false);
+        }
+
+
+        if (velocity.x > 0)
+        {
+        }
     }
 
     bool isContact(Vector2 normal){
