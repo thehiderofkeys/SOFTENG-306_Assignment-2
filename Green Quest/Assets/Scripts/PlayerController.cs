@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
     private float speedX = 2f;
     private float speedY = 2.5f;
     public Animator animator;
+    private bool jump = false;
+    private bool fall = false;
+    private int direction = 1;
+    public GameObject player;
 
     private Rigidbody2D rb;
     private Vector3 checkpoint;
@@ -19,9 +23,8 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
-        animator.SetBool("Jump", false);
-        animator.SetBool("Fall", false);
-
+        jump = false;
+        fall = false;
     }
 
     // Update is called once per frame
@@ -38,28 +41,49 @@ public class PlayerController : MonoBehaviour
             velocity.y = 12f;
         }
 
-        rb.velocity = velocity;
+      
+        // Going right
+        if (velocity.x > 0.1) 
+        {
+            direction = 1;
+        }
+        // Going left
+        if (velocity.x < -0.1) 
+        {
+            direction = -1; 
+        }
 
-        animator.SetFloat("Speed", Mathf.Abs(velocity.x));
-        if (velocity.y > 0)
+        // Set the X scale of the player which sets the direction the character is facing
+        player.transform.localScale = new Vector3(direction, 1, 1);
+
+
+        if (velocity.y > 0.1)
         {
-            animator.SetBool("Jump", true);
-            animator.SetBool("Fall", false);
-        } else if (velocity.y < 0)
+            // if the player's vertical velocity is greater than 0
+            // it means the player is jumping
+            jump = true;
+            fall = false;
+        } 
+
+        if (velocity.y < -0.1)
         {
-            animator.SetBool("Jump", false);
-            animator.SetBool("Fall", true);
+            // if the player's vertical velocity is less than -0.1
+            // it means the player is falling
+            jump = false;
+            fall = true;
         }
         else
         {
-            animator.SetBool("Jump", false);
-            animator.SetBool("Fall", false);
+            fall = false;
         }
 
 
-        if (velocity.x > 0)
-        {
-        }
+
+        rb.velocity = velocity;
+
+        animator.SetFloat("Speed", Mathf.Abs(velocity.x));
+        animator.SetBool("Jump", jump);
+        animator.SetBool("Fall", fall);
     }
 
     bool isContact(Vector2 normal){
