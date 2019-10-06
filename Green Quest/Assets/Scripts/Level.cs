@@ -35,10 +35,15 @@ public class Level : MonoBehaviour{
    
     public void ExitMenu()
     {
-        
-                SceneManager.LoadScene(successExitScreen);
-                
-           
+        if (GetComponent<AchievementController>().IsComplete())
+        {
+            SceneManager.LoadScene(successExitScreen);
+        }
+        else
+        {
+            SceneManager.LoadScene(failExitScreen);
+        }
+   
     }
 
     public void Respawn()
