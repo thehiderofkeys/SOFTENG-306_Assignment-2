@@ -36,12 +36,14 @@ public class AchievementController : MonoBehaviour
         //print("Increment");
     }
 
+    // Decrement the count when the player hits it.
     public void DecrementSwitchCount()
     {
         count--;
         SetText(count);
     }
 
+    // Returns a boolean if the game is Complete.
     public bool IsComplete()
     {
         return isComplete;
