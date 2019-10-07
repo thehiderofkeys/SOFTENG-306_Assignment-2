@@ -667,6 +667,74 @@ MonoBehaviour:
     onRead:
       m_PersistentCalls:
         m_Calls: []
+  - Name: Choi_Normal
+    Duration: 0
+    onRead:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3637600035640852596}
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: 4e48a1857c0e75741a41f22ef9fa1ca7,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Name: Choi_Wow
+    Duration: 0
+    onRead:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3637600035640852596}
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: 094a275258ed0394794546b405cbcc8f,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Name: Choi_Smile
+    Duration: 0
+    onRead:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3637600035640852596}
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: 682b492b424e9224d817951bebee9118,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Name: Choi_Teeth
+    Duration: 0
+    onRead:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3637600035640852596}
+          m_MethodName: set_sprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 21300000, guid: 9f5a32c07939c4f4eafd1b707f33a538,
+              type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   characters:
   - Name: Greta
     id: G
@@ -954,7 +1022,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 252805de51c907d43898c672fd06f1be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e48a1857c0e75741a41f22ef9fa1ca7, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1120,11 +1188,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8511037401954198691}
     m_Modifications:
-    - target: {fileID: 8302631414035105933, guid: 107fbc087c6fd2c49b716313412fc2aa,
-        type: 3}
-      propertyPath: m_Name
-      value: Image
-      objectReference: {fileID: 0}
     - target: {fileID: 1784671148802042970, guid: 107fbc087c6fd2c49b716313412fc2aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1229,6 +1292,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302631414035105933, guid: 107fbc087c6fd2c49b716313412fc2aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Image
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 107fbc087c6fd2c49b716313412fc2aa, type: 3}
