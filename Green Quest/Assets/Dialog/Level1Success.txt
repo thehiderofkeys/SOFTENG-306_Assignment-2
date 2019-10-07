@@ -4,3 +4,5 @@ P
 We must continue, we must save the future!
 G
 Meet me at the next level, we will continue to strengthen your abilities. 
+Event
+FadeOut
