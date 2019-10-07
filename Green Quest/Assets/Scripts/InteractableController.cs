@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+// Handles the interaction that the character will have when pressing the switch.
 public class InteractableController : MonoBehaviour
 {
     public LayerMask playerLayer;
@@ -32,7 +33,7 @@ public class InteractableController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (State)
+                if (State) // Just a simple if statement that will flip the state to be on or off.
                 {
                     OffEvent.Invoke();
                 }
