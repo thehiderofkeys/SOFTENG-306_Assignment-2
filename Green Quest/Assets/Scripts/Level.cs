@@ -33,12 +33,14 @@ public class Level : MonoBehaviour{
         }
     }
 
-   
+   /**
+    * Check if the win condition is met and calls the relvant events.
+    */
     public void ExitMenu()
     {
         if (GetComponent<AchievementController>().IsComplete())
         {
-            OnSuccess.Invoke();
+            OnSuccess.Invoke(); 
         }
         else
         {
@@ -46,6 +48,9 @@ public class Level : MonoBehaviour{
         }
    
     }
+    /**
+     * Method to allow callback of methods using unity events
+     */
     public void LoadScene(string SceneString)
     {
         SceneManager.LoadScene(SceneString);
