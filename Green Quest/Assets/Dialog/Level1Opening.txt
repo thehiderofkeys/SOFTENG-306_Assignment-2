@@ -1,7 +1,11 @@
 Event
 Opening
+Event 
+Choi_Wow
 P
 H-Hello? Is there anyone there? 
+Event 
+Choi_Normal
 P
 . . .
 Event 
@@ -10,22 +14,32 @@ G
 Hello $NAME$, do not be frightened it is just me Greta the Wizard.
 Event
 MusicStart
+Event 
+Choi_Normal
 P
 I haven't met you before. Where did you come from? What are you doing in my room???
 G
 I am sorry if I startled you but there is no need to be worried about my intentions as I am here to help you. I have come from the future to warn you about a great threat.
+Event 
+Choi_Wow
 P
 Help me? Why me? I think I'll be ok without the help of a stranger.
 G
 It's not just you $NAME$, but the whole world needs your help. In the future there is a mysterious evil force that ruins the whole planet. It becomes . . . uninhabitable to all. The only way to stop it is for you to act now, in the present before it's too late. 
+Event 
+Choi_Normal
 P
 Oh wow that sounds pretty terrible. But why me? What can I possibly do to help? I am just a kid, shouldn't more powerful people be trying to help?
 G
 It's hard to explain. Even though I am not quite sure who this evil character is I am sure that it is connected to you in some way. My magical powers are telling me that this evil force cannot be stopped unless YOU act now. 
+Event 
+Choi_Wow
 P
 Hmmmm . . . well if your wizard powers are strong enough to let you travel back in time then I am sure we can trust them. What can I do to help?
 G
 Great! I am so happy you decided to help. Ok, to start we are going to need to follow the malevolent figure's path of environmentally unsustainable destruction.
+Event 
+Choi_Teeth
 P
 Alright, where does this path start? 
 G
@@ -33,22 +47,32 @@ G
 G
 My powers are telling me it starts very close by. I think a good place to start would be to undo all of their bad influences in your house. 
 P
+Event 
+Choi_Wow
 They've been in my house??? 
 G
 I'm not sure . . . 
 G
 Either way, I know that all of these small changes will add up in the end. We cannot conquer this problem all at once but instead we need to work on it in small consistent ways. 
+Event 
+Choi_Smile
 P
 Oh! So all of these small changes will add up in the end? 
 G
 Exactly! That way you can stop the evil force before it gets too out of control. 
+Event 
+Choi_Teeth
 P
 Alright then Greta where can I get started?
 G
 Let's start easy by turning off all of the lights and taps in your house. This will be a great starting step to beating the mysterious villain and everything they have set in motion so far. 
+Event 
+Choi_Normal
 P
 That is easy! 
 G
 It is pretty easy but setting these small habits are going to be very important for the future. 
+Event 
+Choi_Smile
 P
 Great! Let's do it.
