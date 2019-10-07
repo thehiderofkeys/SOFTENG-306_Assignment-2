@@ -757,7 +757,7 @@ MonoBehaviour:
     onRead:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 3637600035640852596}
+        - m_Target: {fileID: 2005506132354845051}
           m_MethodName: set_sprite
           m_Mode: 2
           m_Arguments:
@@ -774,7 +774,7 @@ MonoBehaviour:
     onRead:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 3637600035640852596}
+        - m_Target: {fileID: 2005506132354845051}
           m_MethodName: set_sprite
           m_Mode: 2
           m_Arguments:
@@ -1256,6 +1256,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8511037401954198691}
     m_Modifications:
+    - target: {fileID: 8302631414035105933, guid: 107fbc087c6fd2c49b716313412fc2aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Image
+      objectReference: {fileID: 0}
     - target: {fileID: 1784671148802042970, guid: 107fbc087c6fd2c49b716313412fc2aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1360,11 +1365,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8302631414035105933, guid: 107fbc087c6fd2c49b716313412fc2aa,
-        type: 3}
-      propertyPath: m_Name
-      value: Image
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 107fbc087c6fd2c49b716313412fc2aa, type: 3}

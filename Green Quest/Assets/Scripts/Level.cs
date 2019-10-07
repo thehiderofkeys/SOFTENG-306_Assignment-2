@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -10,8 +11,8 @@ public class Level : MonoBehaviour{
         public Transform background;
         public float seperation;
     }
-    public string successExitScreen;
-    public string failExitScreen;
+    public UnityEvent OnSuccess;
+    public UnityEvent OnFail;
 
 
     public ParallaxElement[] parallaxElements;
@@ -37,13 +38,17 @@ public class Level : MonoBehaviour{
     {
         if (GetComponent<AchievementController>().IsComplete())
         {
-            SceneManager.LoadScene(successExitScreen);
+            OnSuccess.Invoke();
         }
         else
         {
-            SceneManager.LoadScene(failExitScreen);
+            OnFail.Invoke();
         }
    
+    }
+    public void LoadScene(string SceneString)
+    {
+        SceneManager.LoadScene(SceneString);
     }
 
     public void Respawn()

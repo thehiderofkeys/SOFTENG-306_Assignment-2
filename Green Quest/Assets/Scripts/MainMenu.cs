@@ -18,36 +18,43 @@ public class MainMenu : MonoBehaviour
     public Button selectLevel2Button;
     public Button selectLevel3Button;
 
+    // The level selection scene - not used in first prototype as only one lvl
     public string newGameSceneName;
     public GameObject loadGameMenu;
     
 
   
+    // Loads the first level ie a new game
     public void NewGame()
     {
         SceneManager.LoadScene(newGameSceneName);
     }
 
+    // Opens the level selection menu
     public void OpenLoadGameMenu()
     {
         loadGameMenu.SetActive(true);
     }
 
+    // Closes the level selection menu
     public void ExitLoadGameMenu()
     {
         loadGameMenu.SetActive(false);
     }
 
+    // Closes the application - only works on a compiled version of the game
     public void ExitGame()
     {
         Application.Quit(); 
     }
 
+    // Loads level 2 - called in level selction memu
     public void LoadLevel2()
     {
         //SceneManager.LoadScene();
     }
 
+    // Loads level 3 - called in level selction memu
     public void LoadLevel3()
     {
         //SceneManager.LoadScene();
