@@ -60,7 +60,7 @@ public class DialogueContainer : MonoBehaviour
                 if(string.Equals(character.id, id))
                     Name = character.Name + ": ";
             }
-            DialogUI.text = Name+Dialogs[currLine++].Replace("$NAME$","Place Holder Name");
+            DialogUI.text = Name+Dialogs[currLine++].Replace("$NAME$","Choi");
         }
     }
     public IEnumerator PauseForEffect(float seconds)
