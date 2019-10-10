@@ -4,3 +4,5 @@ P
 Oh no... We cannot let evil win!
 G
 You must try again, it is imperative that we triumph.
+Event
+FadeOut

@@ -85,12 +85,14 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Jump", jump);
         animator.SetBool("Fall", fall);
     }
-
+    /**Checks if player is hitting something in a certain direction
+     *     Vector2 normal - the desired direction of contact
+     */
     bool isContact(Vector2 normal){
-        int count = rb.GetContacts(points);
-        for(int i=0;i < count; i++)
+        int count = rb.GetContacts(points); //get all the contact points.
+        for(int i=0;i < count; i++) //iterate through contact points
         {
-            if (Vector2.Dot(points[i].normal,normal) > 0.9){
+            if (Vector2.Dot(points[i].normal,normal) > 0.9){ //if the contact normal 90% in the same direction as the desired direction
                 return true;
             }
         }
