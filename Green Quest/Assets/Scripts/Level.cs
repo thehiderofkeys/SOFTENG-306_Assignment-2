@@ -56,15 +56,7 @@ public class Level : MonoBehaviour{
         SceneManager.LoadScene(SceneString);
     }
 
-    public void Respawn()
-    {
-        GameObject[] obj = GameObject.FindGameObjectsWithTag("Player");
-
-        if (obj.Length > 0)
-        {
-            obj[0].transform.SetPositionAndRotation(new Vector3(-3, -1, 0), new Quaternion(0,0,0,0));
-        }
-    }
+    
    
 
 }
