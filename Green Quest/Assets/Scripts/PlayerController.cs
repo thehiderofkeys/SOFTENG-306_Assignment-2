@@ -114,6 +114,7 @@ public class PlayerController : MonoBehaviour
             {
                 obj[0].transform.SetPositionAndRotation(new Vector3(-3, -1, 0), new Quaternion(0, 0, 0, 0));
                 DecrementLives();
+                HealthController.LoseHeart(remainingLives);
             }
             else
             {
