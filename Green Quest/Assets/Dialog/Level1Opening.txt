@@ -1,3 +1,5 @@
+Event 
+Wooshing
 Event
 Opening
 Event 
@@ -8,14 +10,14 @@ Event
 Choi_Normal
 P
 . . .
+Event
+MusicStart
 Event 
 GretaApperance
 Event 
 Greta_Wow
 G
 Hello $NAME$, do not be frightened it is just me Greta the Wizard.
-Event
-MusicStart
 Event 
 Choi_Normal
 P
