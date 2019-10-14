@@ -7,3 +7,7 @@ How to play:
 3) Double click on Green Quest.exe to run
 4) Set preferred game settings and click play.
 5) Enjoy the game!
+
+
+ADD info
+- serious mapping
