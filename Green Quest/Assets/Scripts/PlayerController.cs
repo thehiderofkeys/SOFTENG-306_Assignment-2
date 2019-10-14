@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Code modified from
 public class PlayerController : MonoBehaviour
@@ -13,6 +14,10 @@ public class PlayerController : MonoBehaviour
     private bool fall = false;
     private int direction = 1;
     public GameObject player;
+    public string exitGameScene;
+
+    private int remainingLives = 3;
+    private int totalLives = 3;
 
     private Rigidbody2D rb;
     private Vector3 checkpoint;
@@ -97,6 +102,62 @@ public class PlayerController : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public void Respawn()
+    {
+        GameObject[] obj = GameObject.FindGameObjectsWithTag("Player");
+
+        if (obj.Length > 0)
+        {
+            if (LivesRemain())
+            {
+                obj[0].transform.SetPositionAndRotation(new Vector3(-3, -1, 0), new Quaternion(0, 0, 0, 0));
+                DecrementLives();
+            }
+            else
+            {
+                SceneManager.LoadScene(exitGameScene);
+            }
+        }
+    }
+
+    /***
+     Helper function that checks if the player should lose a life
+    ***/
+    public void DecrementLives()
+    {
+        if ( remainingLives > 0)
+        {
+            remainingLives--;
+        }
+  
+    }
+
+    /***
+     * 
+     ***/
+     public bool LivesRemain()
+    {
+        if (remainingLives > 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /***
+     * Helper function that checks if the player is able to gain a life and increments it if they can
+     ***/
+    public void IncrementLives()
+    {
+        if( remainingLives < totalLives)
+        {
+            remainingLives++;
+        }
     }
 
 }
