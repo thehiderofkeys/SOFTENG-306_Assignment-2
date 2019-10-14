@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private bool jump = false;
     private bool fall = false;
     private int direction = 1;
+    private bool stunned = false;
     public GameObject player;
 
     private Rigidbody2D rb;
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
         var inputX = Input.GetAxis("Horizontal");
         var inputY = Input.GetAxis("Vertical");
 
-        if (!isContact(new Vector2(-inputX,0).normalized)){
+        if (!isContact(new Vector2(-inputX,0).normalized)&&Mathf.Abs(inputX)>0.2){
             velocity.x = 5f * inputX;
         }
         if (inputY > 0.2 && isContact(Vector2.up)){
@@ -78,25 +79,63 @@ public class PlayerController : MonoBehaviour
         }
 
 
-
-        rb.velocity = velocity;
+        if (!stunned)
+        {
+            rb.velocity = velocity;
+        }
 
         animator.SetFloat("Speed", Mathf.Abs(velocity.x));
         animator.SetBool("Jump", jump);
         animator.SetBool("Fall", fall);
     }
+    public void SetStunned(float duration)
+    {
+        StartCoroutine(Stun(duration));
+    }
+    public void SetInvincible(float duration)
+    {
+        StartCoroutine(Invincible(duration));
+    }
+    private IEnumerator Stun(float duration)
+    {
+        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+        renderer.color = Color.red;
+        stunned = true;
+        yield return new WaitForSeconds(0.2f);
+        renderer.color = Color.white;
+        yield return new WaitForSeconds(duration);
+        stunned = false;
+    }
+    private IEnumerator Invincible(float duration)
+    {
+        gameObject.layer = LayerMask.NameToLayer("IgnoreEnemy");
+        Color currColor;
+        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+        for (int i = 0; i*0.4 < duration; i++)
+        {
+            currColor = renderer.color;
+            currColor.a = 0.8f;
+            renderer.color = currColor;
+            yield return new WaitForSeconds(0.2f);
+            currColor = renderer.color;
+            currColor.a = 1f;
+            renderer.color = currColor;
+            yield return new WaitForSeconds(0.2f);
+        }
+        gameObject.layer = LayerMask.NameToLayer("Default");
+    }
     /**Checks if player is hitting something in a certain direction
      *     Vector2 normal - the desired direction of contact
      */
-    bool isContact(Vector2 normal){
+    GameObject isContact(Vector2 normal){
         int count = rb.GetContacts(points); //get all the contact points.
         for(int i=0;i < count; i++) //iterate through contact points
         {
             if (Vector2.Dot(points[i].normal,normal) > 0.9){ //if the contact normal 90% in the same direction as the desired direction
-                return true;
+                return points[i].otherCollider.gameObject;
             }
         }
-        return false;
+        return null;
     }
 
     public void Respawn()
