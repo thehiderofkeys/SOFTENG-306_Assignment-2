@@ -143,21 +143,11 @@ public class PlayerController : MonoBehaviour
 
     public void Respawn()
     {
-        GameObject[] obj = GameObject.FindGameObjectsWithTag("Player");
-
-        if (obj.Length > 0)
-        {
             if (LivesRemain())
             {
-                obj[0].transform.SetPositionAndRotation(new Vector3(-3, -1, 0), new Quaternion(0, 0, 0, 0));
-                DecrementLives();
-                HealthController.LoseHeart(remainingLives);
+                transform.SetPositionAndRotation(new Vector3(-3, -1, 0), new Quaternion(0, 0, 0, 0));
             }
-            else
-            {
-                SceneManager.LoadScene(exitGameScene);
-            }
-        }
+            DecrementLives();
     }
 
     /***
@@ -168,8 +158,13 @@ public class PlayerController : MonoBehaviour
         if ( remainingLives > 0)
         {
             remainingLives--;
+            HealthController.LoseHeart(remainingLives);
         }
-  
+        else
+        {
+            SceneManager.LoadScene(exitGameScene);
+        }
+
     }
 
     /***
