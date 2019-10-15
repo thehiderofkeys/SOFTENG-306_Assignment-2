@@ -30,6 +30,7 @@ public class EnemyController : MonoBehaviour
             PlayerController player = hit.GetComponent<PlayerController>();
             player.SetStunned(1);
             player.SetInvincible(5);
+            player.DecrementLives();
             Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2(direction * 12f, 12f);
         }
