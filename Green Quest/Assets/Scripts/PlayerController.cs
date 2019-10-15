@@ -62,24 +62,22 @@ public class PlayerController : MonoBehaviour
         // Set the X scale of the player which sets the direction the character is facing
         player.transform.localScale = new Vector3(direction, 1, 1);
 
-
+       
         if (velocity.y > 0.1)
         {
             // if the player's vertical velocity is greater than 0
             // it means the player is jumping
             jump = true;
             fall = false;
-        } 
-
-        if (velocity.y < -0.1)
+        } else if (velocity.y < -0.1)
         {
             // if the player's vertical velocity is less than -0.1
             // it means the player is falling
             jump = false;
             fall = true;
-        }
-        else
+        } else
         {
+            jump = false; // this was not here
             fall = false;
         }
 
