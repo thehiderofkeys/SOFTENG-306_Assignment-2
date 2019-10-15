@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
     ***/
     public void DecrementLives()
     {
-        if ( remainingLives > 0)
+        if ( remainingLives > 1)
         {
             remainingLives--;
             HealthController.LoseHeart(remainingLives);
