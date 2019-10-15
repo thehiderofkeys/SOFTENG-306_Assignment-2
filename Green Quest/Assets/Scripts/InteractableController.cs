@@ -45,5 +45,13 @@ public class InteractableController : MonoBehaviour
             }
         }
     }
+    public void IncrementScore()
+    {
+        ScoreSystemController.IncrementSwitchCount();
+    }
 
+    public void DecrementScore()
+    {
+        ScoreSystemController.DecrementSwitchCount();
+    }
 }

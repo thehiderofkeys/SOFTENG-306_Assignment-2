@@ -38,9 +38,10 @@ public class Level : MonoBehaviour{
     */
     public void ExitMenu()
     {
-        if (GetComponent<AchievementController>().IsComplete())
+        if (GetComponent<ScoreSystemController>().IsComplete())
         {
             OnSuccess.Invoke(); 
+
         }
         else
         {
