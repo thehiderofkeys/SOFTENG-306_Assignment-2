@@ -5,59 +5,25 @@ using UnityEngine.UI;
 
 public class AchievementController : MonoBehaviour
 {
-    private int count;
-    private bool isComplete;
-    public Text scoreText;
-    // Start is called before the first frame update
+    public static List<int> starsForLevels = null;
+
     void Start()
     {
-        count = 0;
-        isComplete = false;
-        SetText(count);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (count >= 10)
+        if (starsForLevels == null)
         {
-            isComplete = true;
-            print("The level is complete");
-            // The player has completed the level
-            
+            InitStarsArray();
         }
     }
 
-    public void IncrementSwitchCount()
+    void InitStarsArray()
     {
-        // Call this method when a switch has been activated
-        count++;
-        SetText(count);
-        //print("Increment");
+        starsForLevels = new List<int>() { 0, 0, 0 };
     }
 
-    // Decrement the count when the player hits it.
-    public void DecrementSwitchCount()
+    // Updates how many stars the user has acheived for the level
+    void UpdateStarsForLevel(int level, int starsAchieved)
     {
-        count--;
-        SetText(count);
-    }
-
-    // Returns a boolean if the game is Complete.
-    public bool IsComplete()
-    {
-        return isComplete;
-    }
-
-
-    void SetText(int score)
-    {
-        scoreText.text = score.ToString() + " / 10";
-        if (score >= 10)
-        {
-
-            scoreText.text = "Complete!";
-        }
+        //starsForLevels[level - 1] = 
     }
 
 
