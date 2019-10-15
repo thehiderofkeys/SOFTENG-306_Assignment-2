@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
             fall = true;
         } else
         {
-            jump = false; // this was not here
+            jump = false;
             fall = false;
         }
 
@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
     ***/
     public void DecrementLives()
     {
-        if ( remainingLives > 0)
+        if ( remainingLives > 1)
         {
             remainingLives--;
             HealthController.LoseHeart(remainingLives);
