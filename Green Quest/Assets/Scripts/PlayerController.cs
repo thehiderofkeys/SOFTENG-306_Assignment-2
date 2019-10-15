@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
             fall = true;
         } else
         {
-            jump = false; // this was not here
+            jump = false;
             fall = false;
         }
 
