@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 // Code modified from
 public class EnemyController : MonoBehaviour
 {
+    public UnityEvent OnStomped;
     private Rigidbody2D rb;
     // Start is called before the first frame update
     private ContactPoint2D[] points = new ContactPoint2D[20];
@@ -28,6 +30,7 @@ public class EnemyController : MonoBehaviour
             PlayerController player = hit.GetComponent<PlayerController>();
             player.SetStunned(1);
             player.SetInvincible(5);
+            player.DecrementLives();
             Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2(direction * 12f, 12f);
         }
@@ -35,7 +38,11 @@ public class EnemyController : MonoBehaviour
         {
             direction *= -1;
         }
-
+        hit = isContact(Vector2.down);
+        if(hit && hit.GetComponent<PlayerController>())
+        {
+            OnStomped.Invoke();
+        }
         // Set the X scale of the player which sets the direction the character is facing
         transform.localScale = new Vector3(direction, 1, 1);
         rb.velocity = velocity;
