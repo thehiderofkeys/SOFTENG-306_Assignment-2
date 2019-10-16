@@ -5,20 +5,22 @@ using UnityEngine.UI;
 
 public class ScoreSystemController : MonoBehaviour
 {
-    private int count;
     private bool isComplete;
-    public Text scoreText;
+
+    public List<Objective> objectives;
     public static ScoreSystemController instance;
+
+   /* int count;
+    Text scoreText;*/
     
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
-        count = 0;
+        //count = 0;
         isComplete = false;
-        SetText(count);
-        
+        //SetText(count);
 
        
     }
@@ -26,16 +28,23 @@ public class ScoreSystemController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (count >= 10)
+
+        int objectivesComplete = 0;
+
+        for(int i = 0; i < objectives.Count; i++)
+        {
+            if (objectives[i].GetTarget() <= objectives[i].GetCount())
+            {
+                objectivesComplete++;
+            }
+        }
+        if (objectivesComplete == objectives.Count)
         {
             isComplete = true;
-            print("The level is complete");
-            // The player has completed the level
-
         }
     }
 
-    public static void IncrementSwitchCount()
+    /*public static void IncrementSwitchCount()
     {
         // Call this method when a switch has been activated
         instance.count++;
@@ -48,7 +57,7 @@ public class ScoreSystemController : MonoBehaviour
     {
         instance.count--;
         instance.SetText(instance.count);
-    }
+    }*/
 
     // Returns a boolean if the game is Complete.
     public bool IsComplete()
@@ -56,14 +65,56 @@ public class ScoreSystemController : MonoBehaviour
         return isComplete;
     }
 
+    public List<Objective> GetObjectives()
+    {
+        return this.objectives;
+    }
+
+
+  
+
+}
+
+[System.Serializable] 
+public class Objective
+{
+    private int count = 0;
+    public Text scoreText;
+    public int target;
+    public int maxTarget;
+
+    public int GetTarget()
+    {
+        return this.target;
+    }
+
+    public int GetCount()
+    {
+        return count; 
+    }
+
+    public void IncrementCount()
+    {
+        // Call this method when a switch has been activated
+        count++;
+        SetText(count);
+        //print("Increment");
+    }
+
+    // Decrement the count when the player hits it.
+    public void DecrementCount()
+    {
+        count--;
+        SetText(count);
+    }
 
     void SetText(int score)
     {
-        scoreText.text = score.ToString() + " / 10";
-        if (score >= 10)
-        {
-
-            scoreText.text = "Complete!";
-        }
+        scoreText.text = score.ToString() + " / " + maxTarget.ToString();
+       // if (score >= maxTarget)
+      //  {
+      //
+       //     scoreText.text = "Complete!";
+      //  }
     }
 }

@@ -45,13 +45,22 @@ public class InteractableController : MonoBehaviour
             }
         }
     }
-    public void IncrementScore()
+    public void IncrementScore(int objectiveIndex)
     {
-        ScoreSystemController.IncrementSwitchCount();
+        List<Objective> objectives = ScoreSystemController.instance.GetObjectives();
+        Objective objective = objectives[objectiveIndex];
+        objective.IncrementCount();
+        objectives[objectiveIndex] = objective;
+
+
+
     }
 
-    public void DecrementScore()
+    public void DecrementScore(int objectiveIndex)
     {
-        ScoreSystemController.DecrementSwitchCount();
+        List<Objective> objectives = ScoreSystemController.instance.GetObjectives();
+        Objective objective = objectives[objectiveIndex];
+        objective.DecrementCount();
+        objectives[objectiveIndex] = objective;
     }
 }

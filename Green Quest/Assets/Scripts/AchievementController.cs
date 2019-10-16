@@ -23,7 +23,7 @@ public class AchievementController : MonoBehaviour
     // Updates how many stars the user has acheived for the level
     void UpdateStarsForLevel(int level, int starsAchieved)
     {
-        //starsForLevels[level - 1] = 
+        starsForLevels[level - 1] = starsAchieved;
     }
 
 
