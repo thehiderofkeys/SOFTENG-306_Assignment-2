@@ -3485,8 +3485,8 @@ MonoBehaviour:
   player: {fileID: 812757332}
   waitingForNextSpawn: 5
   theCountdown: 5
-  offsetX: 3
-  offsetY: 10
+  offsetX: 30
+  offsetY: 20
 --- !u!1001 &574175401
 PrefabInstance:
   m_ObjectHideFlags: 0
