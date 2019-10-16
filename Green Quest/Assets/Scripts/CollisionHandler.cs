@@ -21,5 +21,10 @@ public class CollisionHandler : MonoBehaviour
         {
             colliderEvent.Invoke();
         }
+        if(collider.gameObject.tag == "Seedling")
+        {
+            Destroy(collider.gameObject);
+            RandomSpawnController.instance.SpawnGameObject();
+        }
     }
 }
