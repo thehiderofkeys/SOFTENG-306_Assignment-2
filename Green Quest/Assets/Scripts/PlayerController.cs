@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
             renderer.color = currColor;
             yield return new WaitForSeconds(0.2f);
         }
-        gameObject.layer = LayerMask.NameToLayer("Default");
+        gameObject.layer = LayerMask.NameToLayer("Player");
     }
     /**Checks if player is hitting something in a certain direction
      *     Vector2 normal - the desired direction of contact

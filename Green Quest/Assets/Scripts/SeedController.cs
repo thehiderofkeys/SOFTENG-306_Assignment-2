@@ -5,16 +5,8 @@ using UnityEngine.Events;
 
 public class SeedController : MonoBehaviour
 {
-
-    // Start is called before the first frame update
-    void Start()
+    public void OnPickUp()
     {
-      
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-   
+        Destroy(gameObject);
     }
 }
