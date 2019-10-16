@@ -54,7 +54,7 @@ public class RandomSpawnController : MonoBehaviour
         }
         else
         {
-            //SpawnGameObject(); //retry
+            SpawnGameObject(); //retry
         }
     }
     void OnDrawGizmosSelected()
