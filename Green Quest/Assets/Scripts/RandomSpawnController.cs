@@ -22,23 +22,6 @@ public class RandomSpawnController : MonoBehaviour
         instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // Temporary fix.
-        // timer to spawn the next goodie Object
-        theCountdown -= Time.deltaTime;
-        if (theCountdown <= 0)
-        {
-            if (GameObject.FindGameObjectWithTag("Seedling") == null)
-            {
-                SpawnGameObject();
-                theCountdown = waitingForNextSpawn;
-            }
-              
-        }
-    }
-
     public void SpawnGameObject()
     {
         Debug.Log("In Spawn game obj");
