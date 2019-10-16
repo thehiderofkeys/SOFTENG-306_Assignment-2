@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8052630286341352758}
   - component: {fileID: 8052630286341352759}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 8052630286650064831}
   - component: {fileID: 6202019333629853895}
   - component: {fileID: 6202019333629853892}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -179,6 +179,7 @@ MonoBehaviour:
     m_Bits: 256
   animator: {fileID: 6202019333629853895}
   player: {fileID: 8052630286650064828}
+  exitGameScene: 
 --- !u!95 &6202019333629853895
 Animator:
   serializedVersion: 3

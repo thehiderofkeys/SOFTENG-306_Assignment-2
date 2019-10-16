@@ -52,8 +52,6 @@ public class InteractableController : MonoBehaviour
         objective.IncrementCount();
         objectives[objectiveIndex] = objective;
 
-
-
     }
 
     public void DecrementScore(int objectiveIndex)
