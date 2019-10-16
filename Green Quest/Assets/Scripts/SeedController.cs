@@ -7,6 +7,7 @@ public class SeedController : MonoBehaviour
 {
     public void OnPickUp()
     {
+        Tree.SetTreeEnabled(true);
         Destroy(gameObject);
     }
 }
