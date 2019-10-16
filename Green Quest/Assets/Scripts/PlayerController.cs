@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
             velocity.x = 5f * inputX;
         }
         if (inputY > 0.2 && isContact(Vector2.up)){
+            GetComponent<AudioSource>().Play();
             velocity.y = 12f;
         }
 
