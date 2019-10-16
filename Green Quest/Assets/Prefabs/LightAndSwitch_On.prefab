@@ -201,7 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8192
   OnEvent:
     m_PersistentCalls:
       m_Calls:
