@@ -406,32 +406,32 @@ PrefabInstance:
     - target: {fileID: 3962865802746446241, guid: b919dfed39b4e944d9e3135c2ca7b142,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3962865802746446241, guid: b919dfed39b4e944d9e3135c2ca7b142,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3962865802746446241, guid: b919dfed39b4e944d9e3135c2ca7b142,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 213.04997
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3962865802746446241, guid: b919dfed39b4e944d9e3135c2ca7b142,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -13.700012
-      objectReference: {fileID: 0}
-    - target: {fileID: 6461287682597015862, guid: b919dfed39b4e944d9e3135c2ca7b142,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5301554757897434762, guid: b919dfed39b4e944d9e3135c2ca7b142,
         type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461287682597015862, guid: b919dfed39b4e944d9e3135c2ca7b142,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b919dfed39b4e944d9e3135c2ca7b142, type: 3}
@@ -4117,6 +4117,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 563277973}
     m_Modifications:
+    - target: {fileID: 8052630286650064828, guid: 8d91dcc5fceb65646b4e707e60970fe3,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8052630286650064831, guid: 8d91dcc5fceb65646b4e707e60970fe3,
         type: 3}
       propertyPath: exitGameScene
@@ -4126,11 +4131,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8052630286650064828, guid: 8d91dcc5fceb65646b4e707e60970fe3,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8052630286650064824, guid: 8d91dcc5fceb65646b4e707e60970fe3,
         type: 3}
