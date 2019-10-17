@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScoreSystemController : MonoBehaviour
 {
     private bool isComplete;
-
+    public int level; 
     public List<Objective> objectives;
     public static ScoreSystemController instance;
 
@@ -71,7 +71,31 @@ public class ScoreSystemController : MonoBehaviour
     }
 
 
-  
+    public void CalculateStarsEarned()
+    {
+        int starsEarned = 0; 
+        foreach(Objective o in objectives)
+        {
+            if(o.GetCount() - o.GetTarget() == 0)
+            {
+                starsEarned = 0; 
+            }
+            else if(o.GetMaxTarget() - o.GetCount() == 2)
+            {
+                starsEarned = 1; 
+            }
+            else if(o.GetMaxTarget() - o.GetCount() == 1)
+            {
+                starsEarned = 2;
+            }
+            else if (o.GetMaxTarget() - o.GetCount() == 0)
+            {
+                starsEarned = 3;
+            }
+        }
+
+        AchievementController.UpdateStarsForLevel(level, starsEarned); 
+    }
 
 }
 
@@ -91,6 +115,11 @@ public class Objective
     public int GetCount()
     {
         return count; 
+    }
+
+    public int GetMaxTarget()
+    {
+        return maxTarget;
     }
 
     public void IncrementCount()

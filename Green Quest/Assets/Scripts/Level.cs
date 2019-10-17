@@ -40,8 +40,9 @@ public class Level : MonoBehaviour{
     {
         if (GetComponent<ScoreSystemController>().IsComplete())
         {
-            OnSuccess.Invoke(); 
-
+            GetComponent<ScoreSystemController>().CalculateStarsEarned();
+            OnSuccess.Invoke();
+             
 
         }
         else
