@@ -11,6 +11,7 @@ public class Level : MonoBehaviour{
         public Transform background;
         public float seperation;
     }
+
     public UnityEvent OnSuccess;
     public UnityEvent OnFail;
 
@@ -38,8 +39,10 @@ public class Level : MonoBehaviour{
     */
     public void ExitMenu()
     {
+       
         if (GetComponent<ScoreSystemController>().IsComplete())
         {
+            Debug.Log("Hi");
             GetComponent<ScoreSystemController>().CalculateStarsEarned();
             OnSuccess.Invoke();
              
@@ -47,6 +50,7 @@ public class Level : MonoBehaviour{
         }
         else
         {
+            Debug.Log("Bye!!");
             OnFail.Invoke();
         }
    

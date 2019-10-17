@@ -21,7 +21,7 @@ public class ScoreSystemController : MonoBehaviour
         //count = 0;
         isComplete = false;
         //SetText(count);
-
+        StarImages.level = level;
        
     }
 
@@ -101,9 +101,9 @@ public class ScoreSystemController : MonoBehaviour
             }
             else if (o.GetMaxTarget() - o.GetCount() == 0)
             {
-                if (count <= 2)
+                if (count <= 3)
                 {
-                    count = 2;
+                    count = 3;
                 }
             }
             starsEarned = count; 
@@ -117,7 +117,7 @@ public class ScoreSystemController : MonoBehaviour
 [System.Serializable] 
 public class Objective
 {
-    private int count = 0;
+    public int count = 0;
     public Text scoreText;
     public int target;
     public int maxTarget;
