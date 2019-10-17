@@ -1,0 +1,50 @@
+Event
+MusicStart
+Event
+Opening
+Event
+GretaApperance
+Event
+Greta_Wow
+G
+Welcome to the next level, this is your current world which needs immediate help. Currently, deforestation and wildfires are destroying many forests which life on Earth needs. Not only are we killing ourselves but every other species in existence. So, do you know why trees are important?
+Event
+Choi_Normal
+P
+Hmmmm . . . because the trees are green and they shine bright like a diamond?
+Event
+Greta_Smile
+G
+Yes partially, but the reason trees are vital towards the Earths sustainability is because of photosynthesis. Photosynthesis is a process which produces oxygen for the Earth and removes Carbon Dioxide which is harmful to humans. 
+Event
+Greta_Smile
+G
+Trees also keep the ecosystem going as they produce glucose which animals and insects will eat.
+Event 
+Choi_Wow
+P
+Wow, that’s amazing, when I grow up I wanna be a tree. Why didn't I know about this before?
+Event 
+Greta_Smile
+G
+Yes, they are amazing, and many people also do not know this but currently the wildfires in Brazil are burning down the Amazon rain forest which is the lungs of our Earth.
+Event 
+Greta_Wow
+G
+Deforestation is occurring at such a rapid rate because big cooperations want money. Did you know that 20 football fields of trees are destroyed every minute?
+Event 
+Choi_Wow
+P
+Oh! That is terrible indeed, is there a way I can help save the future for all life on Earth?
+Event 
+Greta_Smile
+G
+Yes, of course, we need your strength to plant as many trees as possible to allow life to thrive in this world, and with your strength to destroy as many bulldozers as possible by jumping on them to decrease the rate of deforestation
+Event
+Choi_Smile
+P
+Yeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeet
+Event 
+Greta_Smile
+G
+Good luck adventurer on your quest, may the odds be ever in your favour
