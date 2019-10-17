@@ -9,12 +9,18 @@ public class StarImages : MonoBehaviour
     public Sprite notAchievedStar;
     public List<Image> starImages;
     public static StarImages instance;
-    public int level; 
+    public static int level; 
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
+        if(instance != null)
+        {
+            Destroy(instance);
+        }
+        instance = this; 
+        
         List<int> starsForLevels = AchievementController.instance.GetStarsForLevels();
+        Debug.Log(starsForLevels);
         SetStars(starsForLevels[level - 1]); 
     }
 

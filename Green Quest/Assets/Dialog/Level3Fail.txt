@@ -1,0 +1,14 @@
+G
+The evil being has defeated you. 
+Event
+Greta_Wow
+P
+I was not ready for the being. But I know I can do it. 
+Event
+Greta_Smile
+G
+That's the spirit $NAME$. Let's try it again!
+Event 
+Choi_Smile
+Event
+FadeOut

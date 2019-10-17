@@ -14,19 +14,23 @@ public class ExitController : MonoBehaviour
     public Button home;
 
     // Screen names to transition to for each button
-    public string nextScene;
-    public string retryScene;
+    //public string nextScene;
+   // public string retryScene;
     public string homeScene;
 
     // Changes to next level
     public void ChangeNextScene()
     {
+        int level = StarImages.level;
+        string nextScene = "Level" + level.ToString();
         SceneManager.LoadScene(nextScene); 
     }
 
     // Reloads the same scene
     public void ChangeRetryScene()
     {
+        int level = StarImages.level;
+        string retryScene = "Level" + level.ToString(); 
         SceneManager.LoadScene(retryScene);
     }
 

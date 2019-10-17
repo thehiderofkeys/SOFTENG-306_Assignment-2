@@ -1,0 +1,10 @@
+G
+You have performed well, your efforts have slowed the evil beings progress. The future can be saved.
+P
+We must continue, we must save the future.
+G
+You have become strong enough to defeat the evil being. Let's travel to the future!
+P
+Lead the way!
+Event
+FadeOut
