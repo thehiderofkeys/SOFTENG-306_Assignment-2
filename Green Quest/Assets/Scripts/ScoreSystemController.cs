@@ -76,22 +76,37 @@ public class ScoreSystemController : MonoBehaviour
         int starsEarned = 0; 
         foreach(Objective o in objectives)
         {
+            int count = 0; 
             if(o.GetCount() - o.GetTarget() == 0)
             {
-                starsEarned = 0; 
+                if(count <= 0)
+                {
+                    count = 0; 
+                }
+                
             }
             else if(o.GetMaxTarget() - o.GetCount() == 2)
             {
-                starsEarned = 1; 
+                if (count <= 1)
+                {
+                    count = 1;
+                }
             }
             else if(o.GetMaxTarget() - o.GetCount() == 1)
             {
-                starsEarned = 2;
+                if (count <= 2)
+                {
+                    count = 2;
+                }
             }
             else if (o.GetMaxTarget() - o.GetCount() == 0)
             {
-                starsEarned = 3;
+                if (count <= 2)
+                {
+                    count = 2;
+                }
             }
+            starsEarned = count; 
         }
 
         AchievementController.UpdateStarsForLevel(level, starsEarned); 

@@ -3513,8 +3513,8 @@ GameObject:
   m_Component:
   - component: {fileID: 563277973}
   - component: {fileID: 563277972}
-  - component: {fileID: 563277971}
   - component: {fileID: 563277974}
+  - component: {fileID: 563277971}
   m_Layer: 0
   m_Name: Level2
   m_TagString: Untagged
@@ -3531,9 +3531,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 563277970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 007ec7fe282b64a29b5e00f1563b430e, type: 3}
+  m_Script: {fileID: 11500000, guid: 09b1ca1ea925a4d4885f0c86e122df0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 2
+  objectives:
+  - scoreText: {fileID: 0}
+    target: 4
+    maxTarget: 7
+  - scoreText: {fileID: 0}
+    target: 4
+    maxTarget: 7
 --- !u!114 &563277972
 MonoBehaviour:
   m_ObjectHideFlags: 0
