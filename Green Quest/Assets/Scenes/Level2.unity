@@ -4027,6 +4027,11 @@ PrefabInstance:
       propertyPath: exitGameScene
       value: FailExitScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 8052630286650064831, guid: 8d91dcc5fceb65646b4e707e60970fe3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8052630286650064824, guid: 8d91dcc5fceb65646b4e707e60970fe3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4091,7 +4096,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 727915770}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2020b9c12b46df4eba98845147b47da, type: 3}
   m_Name: 
