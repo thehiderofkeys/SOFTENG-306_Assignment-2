@@ -4712,6 +4712,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpeningCutscene
       objectReference: {fileID: 0}
+    - target: {fileID: 5340800900766525442, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5340800900766525449, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4996,12 +5001,12 @@ PrefabInstance:
     - target: {fileID: 5340800901098040995, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 24.556599
       objectReference: {fileID: 0}
     - target: {fileID: 8511037401954198691, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 428.00528
       objectReference: {fileID: 0}
     - target: {fileID: 2210036323155389982, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
