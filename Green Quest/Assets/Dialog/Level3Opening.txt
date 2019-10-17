@@ -1,0 +1,42 @@
+vent
+MusicStart
+Event
+Opening
+Event
+GretaApperance
+Event
+Greta_Wow
+G
+$NAME$, you have become strong enough to defeat the evil being.
+Event
+Choi_Normal
+P
+Are you sure? What if I am not strong enough?
+Event
+Greta_Smile
+G
+I believe that you are strong enough $NAME$. You have trained and become stronger to defeat this evil being. 
+Event
+Greta_Smile
+Event 
+Choi_Wow
+P
+You are right, all the small achievements has made me more aware about climate change and made me stronger. 
+Event 
+Greta_Smile
+G
+That is ths spirit $NAME$. 
+Event 
+Greta_Wow
+G
+Now go and defeat the evil being. 
+Event 
+Choi_Wow
+G
+Make sure to avoid the projectiles and jump on the evil being when it is tired!
+Event 
+Greta_Smile
+P
+I can do it. 
+Event
+Choi_Smile

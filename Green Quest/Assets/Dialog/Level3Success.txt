@@ -1,0 +1,40 @@
+G
+You did it, $NAME$!
+Event
+Greta_Smile
+P
+Why does the evil being look like me? 
+Event 
+Choi_Wow
+G
+The evil being is you, $NAME$. 
+Event 
+Greta_Normal
+P
+Wait... Does that mean that I would be causing all this destruction in the future? 
+Event
+Greta_Normal
+G
+This is the evil version of you if you did not do the tasks that made the world greener. 
+Event 
+Choi_Wow
+G
+But all the steps you took make yourself a better and greener person has stopped this future from happening. 
+Event 
+Choi_Normal
+G
+Everything you did before, led up to this moment. The change starts from you $NAME$, it does not matter how small your actions are. It all plays apart to a better and greener future.
+Event
+Choi_Wow
+P
+This is amazing!
+Event
+Choi_Smile
+P
+I will continue this path and hope that this future will never happen. 
+Event 
+Choi_Normal
+Event 
+Greta_Smile
+Event
+FadeOut
