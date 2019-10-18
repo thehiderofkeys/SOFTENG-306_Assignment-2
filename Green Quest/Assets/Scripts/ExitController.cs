@@ -21,7 +21,7 @@ public class ExitController : MonoBehaviour
     // Changes to next level
     public void ChangeNextScene()
     {
-        int level = StarImages.level;
+        int level = StarImages.level + 1;
         string nextScene = "Level" + level.ToString();
         SceneManager.LoadScene(nextScene); 
     }
