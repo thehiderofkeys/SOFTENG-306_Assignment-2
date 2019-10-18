@@ -43,4 +43,8 @@ public class Tree : MonoBehaviour
         }
         return true;
     }
+    private void OnDestroy()
+    {
+        instances.Remove(this);
+    }
 }
