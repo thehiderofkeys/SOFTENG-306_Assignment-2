@@ -24,6 +24,7 @@ public class Tree : MonoBehaviour
     {
         isPlanted = true;
         animator.SetBool("Planted", true);
+        GameObject.FindGameObjectWithTag("Item").GetComponent<SpriteRenderer>().enabled = false ;
         SetTreeEnabled(false);
         if (!isAllTreesPlanted())
         {

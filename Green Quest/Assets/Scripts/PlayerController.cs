@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     private bool fall = false;
     private int direction = 1;
     private bool stunned = false;
-    public GameObject player;
     public string exitGameScene;
 
     private int remainingLives = 3;
@@ -62,7 +61,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Set the X scale of the player which sets the direction the character is facing
-        player.transform.localScale = new Vector3(direction, 1, 1);
+        transform.localScale = new Vector3(direction, 1, 1);
 
        
         if (velocity.y > 0.1)

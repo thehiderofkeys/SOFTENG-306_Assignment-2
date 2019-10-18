@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Level
   - Seedling
+  - Item
   layers:
   - Default
   - TransparentFX
