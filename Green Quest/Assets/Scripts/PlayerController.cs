@@ -40,10 +40,11 @@ public class PlayerController : MonoBehaviour
         var inputX = Input.GetAxis("Horizontal");
         var inputY = Input.GetAxis("Vertical");
 
-        if (!isContact(new Vector2(-inputX,0).normalized)&&Mathf.Abs(inputX)>0.2){
+        if (!isContact(new Vector2(-inputX,0).normalized)&&Mathf.Abs(inputX)>0.2&& !stunned)
+        {
             velocity.x = 5f * inputX;
         }
-        if (inputY > 0.2 && isContact(Vector2.up)){
+        if (inputY > 0.2 && isContact(Vector2.up)&&!stunned){
             GetComponent<AudioSource>().Play();
             velocity.y = 12f;
         }
