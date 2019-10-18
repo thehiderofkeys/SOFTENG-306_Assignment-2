@@ -39,6 +39,7 @@ public class InteractableController : MonoBehaviour
                 }
                 else
                 {
+
                     OnEvent.Invoke();
                 }
                 State = !State;

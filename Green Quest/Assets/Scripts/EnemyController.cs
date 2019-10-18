@@ -45,6 +45,7 @@ public class EnemyController : MonoBehaviour
         hit = isContact(Vector2.down);
         if(hit && hit.GetComponent<PlayerController>())
         {
+            GetComponent<AudioSource>().Play();
             OnStomped.Invoke();
         }
         // Set the X scale of the player which sets the direction the character is facing

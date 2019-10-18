@@ -18,8 +18,8 @@ public class HealthController : MonoBehaviour
     
     public static void LoseHeart(int heartsRemaining)
     {
-
-       instance.livesImages[heartsRemaining].sprite = instance.EmptyHeart;
+        instance.GetComponent<AudioSource>().Play();
+        instance.livesImages[heartsRemaining].sprite = instance.EmptyHeart;
 
     }
 

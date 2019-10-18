@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FailExitScreen.unity
     guid: 92c227387e17bab49b54b6dc609b4ef6
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 9c8d7cf0036693a448adc14c234efc6b
   m_configObjects: {}
