@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     private ContactPoint2D[] points = new ContactPoint2D[20];
     private int direction = 1;
+    private float lastHit = -1;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,16 +28,19 @@ public class EnemyController : MonoBehaviour
         }
         else if(hit.GetComponent<PlayerController>())
         {
-            PlayerController player = hit.GetComponent<PlayerController>();
-            player.SetStunned(1);
-            player.SetInvincible(5);
-            player.DecrementLives();
-            Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
-            rb.velocity = new Vector2(direction * 12f, 12f);
+            if (lastHit < 0 ||  Time.time - lastHit > 0.5) {
+                lastHit = Time.time;
+                PlayerController player = hit.GetComponent<PlayerController>();
+                player.SetStunned(1);
+                player.SetInvincible(5);
+                player.DecrementLives();
+                Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
+                rb.velocity = new Vector2(direction * 12f, 12f);
+            }
         }
         else
         {
-            direction *= -1;
+            Flip();
         }
         hit = isContact(Vector2.down);
         if(hit && hit.GetComponent<PlayerController>())
@@ -46,6 +50,10 @@ public class EnemyController : MonoBehaviour
         // Set the X scale of the player which sets the direction the character is facing
         transform.localScale = new Vector3(direction, 1, 1);
         rb.velocity = velocity;
+    }
+    public void Flip()
+    { 
+        direction *= -1;
     }
     /**Checks if player is hitting something in a certain direction
      *     Vector2 normal - the desired direction of contact
