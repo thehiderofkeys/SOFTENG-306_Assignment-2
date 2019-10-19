@@ -1,4 +1,4 @@
-Event
+﻿Event
 MusicStart
 Event
 Opening
@@ -7,7 +7,11 @@ GretaApperance
 Event
 Greta_Wow
 G
-Welcome $NAME$. Currently, deforestation and wildfires are destroying many forests which life on Earth needs. Not only are we killing ourselves but every other species in existence. So, do you know why trees are important?
+Welcome $NAME$. The next step to defeating the evil figure is to battle his destructive reign on nature.  
+Event
+Greta_Wow
+G
+Currently, deforestation and wildfires are destroying many forests which life on Earth needs. Not only are we killing ourselves but every other species in existence. So, do you know why tree are important? 
 Event
 Choi_Normal
 P
@@ -15,7 +19,7 @@ Hmmmm . . . because the trees are green and they shine bright like a diamond?
 Event
 Greta_Smile
 G
-Yes partially, but the reason trees are vital towards the Earths sustainability is because of photosynthesis. Photosynthesis is a process which produces oxygen for the Earth and removes Carbon Dioxide which is harmful to humans. 
+Yes partially, but the reason trees are vital towards the Earths sustainability is because of photosynthesis. Photosynthesis is a process which produces oxygen for the Earth and removes carbon dioxide which is harmful to humans. 
 Event
 Greta_Smile
 Event 
@@ -23,13 +27,9 @@ Choi_Wow
 P
 Wow, that’s amazing, we need to save the trees.
 Event 
-Greta_Smile
-G
-Yes, they are amazing, and many people also do not know this but currently the wildfires in Brazil are burning down the Amazon rain forest which is described to be the lungs of our Earth.
-Event 
 Greta_Wow
 G
-Deforestation is occurring at such a rapid rate. Did you know that 20 football fields of trees are destroyed every minute?
+Yes, they are amazing! But, deforestation is occurring at such a rapid rate. Did you know that 20 football fields of trees are destroyed every minute?
 Event 
 Choi_Wow
 P

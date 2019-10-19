@@ -21,59 +21,35 @@ Hello $NAME$, do not be frightened it is just me Greta the Wizard.
 Event 
 Choi_Normal
 P
-I haven't met you before. Where did you come from? What are you doing in my room???
+What are you doing in my room???
 Event 
 Greta_Smile
 G
-I am sorry if I startled you but there is no need to be worried about my intentions as I am here to help you. I have come from the future to warn you about a great threat.
+I am here to help you. I have come from the future to warn you about a great threat.
 Event 
 Choi_Wow
 P
-Help me? Why me? I think I'll be ok without the help of a stranger.
+Help me? Why?
 Event 
 Greta_Wow
 G
-It's not just you $NAME$, but the whole world needs your help. In the future there is a mysterious evil force that ruins the whole planet. It becomes . . . uninhabitable to all. The only way to stop it is for you to act now, in the present before it's too late. 
+The whole world needs your help. In the future there is a mysterious evil figure that ruins the whole planet. It becomes . . . uninhabitable to all. The only way to stop it is for you to act now, in the present before it's too late. 
 Event 
 Choi_Normal
 P
-Oh wow that sounds pretty terrible. But why me? What can I possibly do to help? I am just a kid, shouldn't more powerful people be trying to help?
-Event 
-Greta_Teeth
-G
-It's hard to explain. Even though I am not quite sure who this evil character is I am sure that it is connected to you in some way. My magical powers are telling me that this evil force cannot be stopped unless YOU act now. 
-Event 
-Choi_Wow
-P
-Hmmmm . . . well if your wizard powers are strong enough to let you travel back in time then I am sure we can trust them. What can I do to help?
+What can I possibly do to help? I am just a kid, shouldn't more powerful people be trying to help?
 Event 
 Greta_Smile
 G
-Great! I am so happy you decided to help. Ok, to start we are going to need to follow the malevolent figure's path of environmentally unsustainable destruction.
+My magical powers are telling me that this evil force cannot be stopped unless YOU act now. To start we are going to need to follow the evil figure's trail to undo their environmentally unsustainable destruction.
 Event 
 Choi_Teeth
 P
-Alright, where does this path start? 
-Event 
-Greta_Normal
-G
-. . .
+Alright, where does this trail start? 
 Event 
 Greta_Wow
 G
-My powers are telling me it starts very close by. I think a good place to start would be to undo all of their bad influences in your house. 
-Event 
-Choi_Wow
-P
-They've been in my house??? 
-Event 
-Greta_Normal
-G
-I'm not sure . . . 
-Event 
-Greta_Teeth
-G
-Either way, I know that all of these small changes will add up in the end. We cannot conquer this problem all at once but instead we need to work on it in small consistent ways. 
+My powers are telling me it starts very close by with the bad influences in your house. We cannot conquer this problem all at once but instead we need to work on it in small consistent ways. 
 Event 
 Choi_Smile
 P
@@ -81,7 +57,7 @@ Oh! So all of these small changes will add up in the end?
 Event 
 Greta_Smile
 G
-Exactly! That way you can stop the evil force before it gets too out of control. 
+Exactly! That way you can stop the evil force before it gets out of control. 
 Event 
 Choi_Teeth
 P
@@ -89,7 +65,7 @@ Alright then Greta where can I get started?
 Event 
 Greta_Teeth
 G
-Let's start easy by turning off all of the lights and taps in your house. This will be a great starting step to beating the mysterious villain and everything they have set in motion so far. 
+Let's start easy by turning off all of the lights and taps in your house. This will be a great starting step to reducing your electricity and water wastage. 
 Event 
 Choi_Normal
 P
