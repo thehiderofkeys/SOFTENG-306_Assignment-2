@@ -160,6 +160,13 @@ public class PlayerController : MonoBehaviour
         {
             remainingLives--;
             HealthController.LoseHeart(remainingLives);
+            if (ScoreSystemController.instance.level == 3)
+            {
+                List<Objective> objectives = ScoreSystemController.instance.GetObjectives();
+                Objective objective = objectives[0];
+                objective.DecrementCount();
+                objectives[0] = objective;
+            }
         }
         else
         {
