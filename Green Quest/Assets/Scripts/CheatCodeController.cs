@@ -46,7 +46,23 @@ public class CheatCodeController : MonoBehaviour
             // Reset the index so this is only called once
             index = 0;
 
+            // Transform the player position to the end of the level
             player.transform.SetPositionAndRotation(endPosition.position, new Quaternion(0, 0, 0, 0));
+
+            // Get the array of all taps and switches
+            GameObject[] array = GameObject.FindGameObjectsWithTag("Switch");
+
+            // Go through every single switch and tap of the level
+            foreach (GameObject item in array)
+            {
+                // If the tap or light is sitll on
+                if (item.GetComponent<InteractableController>().State)
+                {
+                    // Turn off the tap/switch
+                    item.GetComponent<InteractableController>().OffEvent.Invoke();
+                }
+
+            }
         }
     }
 }
