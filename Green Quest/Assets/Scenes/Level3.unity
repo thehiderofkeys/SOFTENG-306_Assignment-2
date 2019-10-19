@@ -13738,7 +13738,7 @@ PrefabInstance:
     - target: {fileID: 7702485633095297351, guid: fd5e350d88402e447833f3ed9e0ca263,
         type: 3}
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
-      value: SuccessCutscene
+      value: SuccessExitScreen
       objectReference: {fileID: 0}
     - target: {fileID: 7702485632362180585, guid: fd5e350d88402e447833f3ed9e0ca263,
         type: 3}
@@ -14164,6 +14164,49 @@ MonoBehaviour:
   - {fileID: 1941873995}
   FilledSkull: {fileID: 21300000, guid: 0c0b2730c41b84345929b04be13b7a0f, type: 3}
   EmptySkull: {fileID: 21300000, guid: 4515e9946604ec249a20497a6101a273, type: 3}
+--- !u!1 &372831788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 372831789}
+  - component: {fileID: 372831790}
+  m_Layer: 0
+  m_Name: 'Achievement Controller object '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &372831789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372831788}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.55677, y: 0.24700263, z: 0.4453125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &372831790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372831788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007ec7fe282b64a29b5e00f1563b430e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &404606177
 GameObject:
   m_ObjectHideFlags: 0
@@ -15716,8 +15759,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
-  objectives: [{count: 3, scoreText: {fileID: 0}, target: 1, maxTarget: 3}, {count: 0,
-      scoreText: {fileID: 1424171530}, target: 6, maxTarget: 6}]
+  objectives:
+  - count: 3
+    scoreText: {fileID: 0}
+    target: 1
+    maxTarget: 3
+  - {count: 0, scoreText: {fileID: 1424171530}, target: 6, maxTarget: 6}
 --- !u!114 &843724260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15732,16 +15779,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSuccess:
     m_PersistentCalls:
-      m_Calls: [{m_Target: {fileID: 36524590}, m_MethodName: SetActive, m_Mode: 6,
-          m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: 'UnityEngine.Object,
-              UnityEngine', m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: '',
-            m_BoolArgument: 0}, m_CallState: 2}]
+      m_Calls:
+      - m_Target: {fileID: 36524590}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnFail:
     m_PersistentCalls:
-      m_Calls: [{m_Target: {fileID: 1667851081}, m_MethodName: SetActive, m_Mode: 6,
-          m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: 'UnityEngine.Object,
-              UnityEngine', m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: '',
-            m_BoolArgument: 0}, m_CallState: 2}]
+      m_Calls:
+      - m_Target: {fileID: 1667851081}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   parallaxElements: []
 --- !u!4 &843724261
 Transform:

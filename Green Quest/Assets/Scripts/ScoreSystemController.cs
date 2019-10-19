@@ -62,6 +62,7 @@ public class ScoreSystemController : MonoBehaviour
     // Returns a boolean if the game is Complete.
     public bool IsComplete()
     {
+        Debug.Log("isCOmplete");
         return isComplete;
     }
 
