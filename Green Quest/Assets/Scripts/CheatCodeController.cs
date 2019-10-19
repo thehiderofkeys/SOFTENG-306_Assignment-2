@@ -13,7 +13,7 @@ public class CheatCodeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Code is "idkfa", user needs to input this in the right order
+        // Code is "787898", user needs to input this in the right order
         code = new string[] { "7", "8", "7", "8", "9", "8" };
         index = 0;
     }
@@ -51,6 +51,22 @@ public class CheatCodeController : MonoBehaviour
 
             // Get the array of all taps and switches
             GameObject[] array = GameObject.FindGameObjectsWithTag("Switch");
+            GameObject[] enemyArray = GameObject.FindGameObjectsWithTag("Enemy");
+            GameObject[] treeArray = GameObject.FindGameObjectsWithTag("Tree");
+
+            foreach (GameObject tree in treeArray)
+            {
+                tree.GetComponent<InteractableController>().OnEvent.Invoke();
+            }
+
+            foreach (GameObject enemy in enemyArray)
+            {
+                if (enemy.GetComponent<Collider2D>().enabled)
+                {
+                    enemy.GetComponent<EnemyController>().OnStomped.Invoke();
+                }
+
+            }
 
             // Go through every single switch and tap of the level
             foreach (GameObject item in array)

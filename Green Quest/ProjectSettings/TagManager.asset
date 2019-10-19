@@ -8,6 +8,8 @@ TagManager:
   - Seedling
   - Item
   - Switch
+  - Enemy
+  - Tree
   layers:
   - Default
   - TransparentFX
