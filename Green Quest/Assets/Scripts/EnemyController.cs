@@ -12,6 +12,9 @@ public class EnemyController : MonoBehaviour
     private ContactPoint2D[] points = new ContactPoint2D[20];
     private int direction = 1;
     private float lastHit = -1;
+    private float lastStomp = -1;
+    public bool Invincible;
+    public bool stunned = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,19 +27,13 @@ public class EnemyController : MonoBehaviour
         GameObject hit = isContact(new Vector2(-direction, 0).normalized);
         if (!hit)
         {
-            velocity.x = 5f * direction;
+            if(!stunned)
+                velocity.x = 5f * direction;
         }
         else if(hit.GetComponent<PlayerController>())
         {
-            if (lastHit < 0 ||  Time.time - lastHit > 0.5) {
-                lastHit = Time.time;
-                PlayerController player = hit.GetComponent<PlayerController>();
-                player.SetStunned(1);
-                player.SetInvincible(5);
-                player.DecrementLives();
-                Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
-                rb.velocity = new Vector2(direction * 12f, 12f);
-            }
+            PlayerController player = hit.GetComponent<PlayerController>();
+            HitPlayer(player);
         }
         else
         {
@@ -45,8 +42,19 @@ public class EnemyController : MonoBehaviour
         hit = isContact(Vector2.down);
         if(hit && hit.GetComponent<PlayerController>())
         {
-            GetComponent<AudioSource>().Play();
-            OnStomped.Invoke();
+            if (Invincible)
+            {
+                HitPlayer(hit.GetComponent<PlayerController>());
+            }
+            else
+            {
+                if (lastStomp < 0 || Time.time - lastStomp > 5f)
+                {
+                    lastStomp = Time.time;
+                    GetComponent<AudioSource>().Play();
+                    OnStomped.Invoke();
+                }
+            }
         }
         // Set the X scale of the player which sets the direction the character is facing
         transform.localScale = new Vector3(direction, 1, 1);
@@ -70,5 +78,21 @@ public class EnemyController : MonoBehaviour
             }
         }
         return null;
+    }
+    public void LaunchPlayer(PlayerController player)
+    {
+        player.SetStunned(1);
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(direction * 12f, 12f);
+    }
+    public void HitPlayer(PlayerController player)
+    {
+        if (lastHit < 0 || Time.time - lastHit > 0.5)
+        {
+            lastHit = Time.time;
+            LaunchPlayer(player);
+            player.SetInvincible(5);
+            player.DecrementLives();
+        }
     }
 }
