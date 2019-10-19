@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public LayerMask groundLayer;
+    public static PlayerController instance;
     private float speedX = 2f;
     private float speedY = 2.5f;
     public Animator animator;
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private ContactPoint2D[] points = new ContactPoint2D[20];
     void Start()
     {
+        instance = this;
         rb = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
         jump = false;
@@ -103,10 +105,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator Stun(float duration)
     {
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-        renderer.color = Color.red;
         stunned = true;
-        yield return new WaitForSeconds(0.2f);
-        renderer.color = Color.white;
         yield return new WaitForSeconds(duration);
         stunned = false;
     }
@@ -115,6 +114,9 @@ public class PlayerController : MonoBehaviour
         gameObject.layer = LayerMask.NameToLayer("IgnoreEnemy");
         Color currColor;
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+        renderer.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        renderer.color = Color.white;
         for (int i = 0; i*0.4 < duration; i++)
         {
             currColor = renderer.color;
