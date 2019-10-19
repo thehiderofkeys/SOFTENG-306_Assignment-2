@@ -26,5 +26,9 @@ public class CollisionHandler : MonoBehaviour
             Destroy(collider.gameObject);
             RandomSpawnController.instance.SpawnGameObject();
         }
+        if(collider.gameObject.tag == "Enemy")
+        {
+            Destroy(collider.gameObject);
+        }
     }
 }
