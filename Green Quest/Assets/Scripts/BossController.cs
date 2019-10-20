@@ -51,5 +51,7 @@ public class BossController : MonoBehaviour
         }
         GetComponent<EnemyController>().stunned = false;
         gameObject.layer = LayerMask.NameToLayer("Enemy");
+
+        GetComponentInChildren<Animator>().enabled = true;
     }
 }
