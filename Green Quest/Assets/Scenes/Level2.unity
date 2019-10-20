@@ -4396,6 +4396,9 @@ MonoBehaviour:
   player: {fileID: 812757332}
   waitingForNextSpawn: 5
   theCountdown: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
   offsetX: 30
   offsetY: 20
 --- !u!114 &563277975
@@ -7003,7 +7006,7 @@ PrefabInstance:
     - target: {fileID: 7702485633095297352, guid: fd5e350d88402e447833f3ed9e0ca263,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7702485633095297347, guid: fd5e350d88402e447833f3ed9e0ca263,
         type: 3}
@@ -7168,7 +7171,7 @@ PrefabInstance:
     - target: {fileID: 7702485632362180585, guid: fd5e350d88402e447833f3ed9e0ca263,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 24.556599
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd5e350d88402e447833f3ed9e0ca263, type: 3}
@@ -35653,7 +35656,7 @@ PrefabInstance:
     - target: {fileID: 6017659548870520583, guid: 981a52384f403634baca94cbdb27a32a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6017659548870520588, guid: 981a52384f403634baca94cbdb27a32a,
         type: 3}
@@ -35888,7 +35891,7 @@ PrefabInstance:
     - target: {fileID: 6017659549612550566, guid: 981a52384f403634baca94cbdb27a32a,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 24.556599
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 981a52384f403634baca94cbdb27a32a, type: 3}

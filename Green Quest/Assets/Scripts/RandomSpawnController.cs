@@ -10,6 +10,7 @@ public class RandomSpawnController : MonoBehaviour
     public Transform player;
     public float waitingForNextSpawn = 10;
     public float theCountdown = 10;
+    public LayerMask layerMask;
     Vector2 position;
 
     public float offsetX;
@@ -30,9 +31,9 @@ public class RandomSpawnController : MonoBehaviour
         float playerPositionY = player.position.y;
         position = player.position + new Vector3((Random.value-0.5f) * offsetX, offsetY);
         // Gets the random position of the drop. 
-        RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down);
+        RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down,100f, layerMask);
 
-        if (hit && !Physics2D.OverlapBox(position,new Vector2(1,1), 0))
+        if (hit && !Physics2D.OverlapBox(position,new Vector2(1,1), 0, layerMask))
         {
             Instantiate(seedlingPrefab, position, transform.rotation);
             return;
@@ -44,6 +45,7 @@ public class RandomSpawnController : MonoBehaviour
         }
         else
         {
+            Debug.LogError("Failed to do Random Spawn after 10 tries");
             Instantiate(seedlingPrefab, position, transform.rotation);
         }
         recursiveCount = 0;

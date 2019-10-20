@@ -111,17 +111,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44895eed8e24ba841b19b28cbcc66af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackCooldown: 0
   AttackList:
   - AttackPrefab: {fileID: 2533644129762286497, guid: 3b85a81d176489f46aa4304c248ea212,
       type: 3}
     probability: 1
-    Cooldown: 5
-    LastAttack: 0
   - AttackPrefab: {fileID: 3828225842417508565, guid: bd31a460d3398aa40a1cb7b4b0547d7e,
       type: 3}
     probability: 1
-    Cooldown: 5
-    LastAttack: 0
   HealthRemaing: 6
   OnDeath:
     m_PersistentCalls:
@@ -235,7 +232,7 @@ PrefabInstance:
     - target: {fileID: 7779946164174373217, guid: 93b45cc839646764c92302e26433594b,
         type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: BigBossEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 7779946164174373246, guid: 93b45cc839646764c92302e26433594b,
         type: 3}
@@ -360,6 +357,11 @@ PrefabInstance:
     - target: {fileID: 7779946164174373245, guid: 93b45cc839646764c92302e26433594b,
         type: 3}
       propertyPath: OnStomped.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779946164174373245, guid: 93b45cc839646764c92302e26433594b,
+        type: 3}
+      propertyPath: Invincible
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7779946163374700413, guid: 93b45cc839646764c92302e26433594b,
