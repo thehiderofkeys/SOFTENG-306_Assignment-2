@@ -9,9 +9,6 @@ public class ScoreSystemController : MonoBehaviour
     public int level; 
     public List<Objective> objectives;
     public static ScoreSystemController instance;
-
-   /* int count;
-    Text scoreText;*/
     
 
     // Start is called before the first frame update
@@ -29,10 +26,18 @@ public class ScoreSystemController : MonoBehaviour
     void Update()
     {
 
+        
+    }
+
+
+    // Returns a boolean if the game is Complete.
+    public bool IsComplete()
+    {
         int objectivesComplete = 0;
 
-        for(int i = 0; i < objectives.Count; i++)
+        for (int i = 0; i < objectives.Count; i++)
         {
+
             if (objectives[i].GetTarget() <= objectives[i].GetCount())
             {
                 objectivesComplete++;
@@ -42,27 +47,7 @@ public class ScoreSystemController : MonoBehaviour
         {
             isComplete = true;
         }
-    }
-
-    /*public static void IncrementSwitchCount()
-    {
-        // Call this method when a switch has been activated
-        instance.count++;
-        instance.SetText(instance.count);
-        //print("Increment");
-    }
-
-    // Decrement the count when the player hits it.
-    public static void DecrementSwitchCount()
-    {
-        instance.count--;
-        instance.SetText(instance.count);
-    }*/
-
-    // Returns a boolean if the game is Complete.
-    public bool IsComplete()
-    {
-        Debug.Log("isCOmplete");
+        
         return isComplete;
     }
 
@@ -77,12 +62,15 @@ public class ScoreSystemController : MonoBehaviour
         int starsEarned = 0; 
         foreach(Objective o in objectives)
         {
+               
             int count = 0; 
-            if(o.GetCount() - o.GetTarget() == 0)
+            if(o.GetMaxTarget() - o.GetCount() == 3)
             {
                 if(count <= 0)
                 {
-                    count = 0; 
+                    
+                    count = 0;
+                    Debug.Log("Count is: " + count.ToString());
                 }
                 
             }
@@ -90,25 +78,32 @@ public class ScoreSystemController : MonoBehaviour
             {
                 if (count <= 1)
                 {
+                   
                     count = 1;
+                    Debug.Log("Count is: " + count.ToString());
                 }
             }
             else if(o.GetMaxTarget() - o.GetCount() == 1)
             {
                 if (count <= 2)
                 {
+                    
                     count = 2;
+                    Debug.Log("Count is: " + count.ToString());
                 }
             }
             else if (o.GetMaxTarget() - o.GetCount() == 0)
             {
                 if (count <= 3)
                 {
+                    
                     count = 3;
+                    Debug.Log("Count is: " + count.ToString());
                 }
             }
             starsEarned = count; 
         }
+        
 
         AchievementController.UpdateStarsForLevel(level, starsEarned); 
     }
