@@ -4423,6 +4423,9 @@ MonoBehaviour:
   player: {fileID: 812757332}
   waitingForNextSpawn: 5
   theCountdown: 5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
   offsetX: 30
   offsetY: 20
 --- !u!114 &563277975
