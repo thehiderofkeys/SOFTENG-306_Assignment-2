@@ -17061,6 +17061,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 3962865802597757184, guid: b919dfed39b4e944d9e3135c2ca7b142,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3962865802597757436, guid: b919dfed39b4e944d9e3135c2ca7b142,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17603,37 +17608,21 @@ CompositeCollider2D:
         Y: 40000000
       - X: -30000000
         Y: 40000000
-    - - X: 100000000
-        Y: 40000000
-      - X: 90000000
-        Y: 40000000
-      - X: 90000000
-        Y: 30000000
-      - X: 100000000
-        Y: 30000000
-    - - X: 290000000
-        Y: 40000000
-      - X: 280000000
-        Y: 40000000
-      - X: 280000000
-        Y: 30000000
-      - X: 290000000
-        Y: 30000000
-    - - X: 90000000
-        Y: 30000000
-      - X: 80000000
-        Y: 30000000
-      - X: 80000000
-        Y: 20000000
-      - X: 90000000
-        Y: 20000000
     - - X: 300000000
         Y: 30000000
-      - X: 290000000
+      - X: 280000000
         Y: 30000000
-      - X: 290000000
+      - X: 280000000
         Y: 20000000
       - X: 300000000
+        Y: 20000000
+    - - X: 100000000
+        Y: 30000000
+      - X: 80000000
+        Y: 30000000
+      - X: 80000000
+        Y: 20000000
+      - X: 100000000
         Y: 20000000
     - - X: -60000000
         Y: 20000000
@@ -17667,6 +17656,22 @@ CompositeCollider2D:
         Y: 10000000
       - X: 220000000
         Y: 10000000
+    - - X: 280000000
+        Y: 20000000
+      - X: 270000000
+        Y: 20000000
+      - X: 270000000
+        Y: 10000000
+      - X: 280000000
+        Y: 10000000
+    - - X: 110000000
+        Y: 20000000
+      - X: 100000000
+        Y: 20000000
+      - X: 100000000
+        Y: 10000000
+      - X: 110000000
+        Y: 10000000
     - - X: 70000000
         Y: 10000000
       - X: 50000000
@@ -17683,30 +17688,22 @@ CompositeCollider2D:
         Y: 0
       - X: 330000000
         Y: 0
+    - - X: 140000000
+        Y: -10000000
+      - X: 120000000
+        Y: -10000000
+      - X: 120000000
+        Y: -20000000
+      - X: 140000000
+        Y: -20000000
     - - X: 260000000
         Y: -10000000
-      - X: 250000000
-        Y: -10000000
-      - X: 250000000
-        Y: 0
-      - X: 240000000
-        Y: 0
       - X: 240000000
         Y: -10000000
-      - X: 250000000
-        Y: -10000000
-      - X: 250000000
+      - X: 240000000
         Y: -20000000
       - X: 260000000
         Y: -20000000
-    - - X: 140000000
-        Y: 0
-      - X: 130000000
-        Y: 0
-      - X: 130000000
-        Y: -10000000
-      - X: 140000000
-        Y: -10000000
     - - X: -40000000
         Y: -10000000
       - X: -60000000
@@ -17738,14 +17735,6 @@ CompositeCollider2D:
       - X: 350000000
         Y: -20000000
       - X: 370000000
-        Y: -20000000
-    - - X: 130000000
-        Y: -10000000
-      - X: 120000000
-        Y: -10000000
-      - X: 120000000
-        Y: -20000000
-      - X: 130000000
         Y: -20000000
   m_CompositePaths:
     m_Paths:
@@ -17805,22 +17794,14 @@ CompositeCollider2D:
       - {x: -5, y: 5}
       - {x: -5, y: 4}
       - {x: -3, y: 4}
-    - - {x: 10, y: 4}
-      - {x: 9, y: 4}
-      - {x: 9, y: 3}
-      - {x: 10, y: 3}
-    - - {x: 29, y: 4}
-      - {x: 28, y: 4}
+    - - {x: 30, y: 3}
       - {x: 28, y: 3}
-      - {x: 29, y: 3}
-    - - {x: 9, y: 3}
+      - {x: 28, y: 2}
+      - {x: 30, y: 2}
+    - - {x: 10, y: 3}
       - {x: 8, y: 3}
       - {x: 8, y: 2}
-      - {x: 9, y: 2}
-    - - {x: 30, y: 3}
-      - {x: 29, y: 3}
-      - {x: 29, y: 2}
-      - {x: 30, y: 2}
+      - {x: 10, y: 2}
     - - {x: -6, y: 2}
       - {x: -8, y: 2}
       - {x: -8, y: 1}
@@ -17837,6 +17818,14 @@ CompositeCollider2D:
       - {x: 16, y: 2}
       - {x: 16, y: 1}
       - {x: 22, y: 1}
+    - - {x: 28, y: 2}
+      - {x: 27, y: 2}
+      - {x: 27, y: 1}
+      - {x: 28, y: 1}
+    - - {x: 11, y: 2}
+      - {x: 10, y: 2}
+      - {x: 10, y: 1}
+      - {x: 11, y: 1}
     - - {x: 7, y: 1}
       - {x: 5, y: 1}
       - {x: 5, y: 0}
@@ -17845,18 +17834,14 @@ CompositeCollider2D:
       - {x: 31, y: 1}
       - {x: 31, y: 0}
       - {x: 33, y: 0}
+    - - {x: 14, y: -1}
+      - {x: 12, y: -1}
+      - {x: 12, y: -2}
+      - {x: 14, y: -2}
     - - {x: 26, y: -1}
-      - {x: 25, y: -1}
-      - {x: 25, y: 0}
-      - {x: 24, y: 0}
       - {x: 24, y: -1}
-      - {x: 25, y: -1}
-      - {x: 25, y: -2}
+      - {x: 24, y: -2}
       - {x: 26, y: -2}
-    - - {x: 14, y: 0}
-      - {x: 13, y: 0}
-      - {x: 13, y: -1}
-      - {x: 14, y: -1}
     - - {x: -4, y: -1}
       - {x: -6, y: -1}
       - {x: -6, y: -2}
@@ -17873,10 +17858,6 @@ CompositeCollider2D:
       - {x: 35, y: -1}
       - {x: 35, y: -2}
       - {x: 37, y: -2}
-    - - {x: 13, y: -1}
-      - {x: 12, y: -1}
-      - {x: 12, y: -2}
-      - {x: 13, y: -2}
   m_VertexDistance: 0.0005
 --- !u!50 &404606180
 Rigidbody2D:
@@ -18012,6 +17993,24 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 13, y: -2, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 24, y: -2, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 25, y: -2, z: 0}
     second:
       m_TileIndex: 1
@@ -18049,24 +18048,6 @@ Tilemap:
       m_TileFlags: 1
       m_ColliderType: 1
   - first: {x: 43, y: -2, z: 0}
-    second:
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 13, y: -1, z: 0}
-    second:
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 24, y: -1, z: 0}
     second:
       m_TileIndex: 1
       m_TileSpriteIndex: 1
@@ -18147,6 +18128,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 10, y: 1, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 16, y: 1, z: 0}
     second:
       m_TileIndex: 1
@@ -18201,6 +18191,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 27, y: 1, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 44, y: 1, z: 0}
     second:
       m_TileIndex: 1
@@ -18228,25 +18227,25 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 9, y: 2, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 28, y: 2, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 29, y: 2, z: 0}
-    second:
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 9, y: 3, z: 0}
-    second:
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
-  - first: {x: 28, y: 3, z: 0}
     second:
       m_TileIndex: 1
       m_TileSpriteIndex: 1
@@ -18997,15 +18996,15 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 56
     m_Data: {fileID: 11400000, guid: 557ccf92ebfc35d40818756499cdd18c, type: 2}
-  - m_RefCount: 58
+  - m_RefCount: 60
     m_Data: {fileID: 11400000, guid: a3ea6f8076d9a414a8ff76d1114f9da3, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 56
     m_Data: {fileID: 21300000, guid: 252805de51c907d43898c672fd06f1be, type: 3}
-  - m_RefCount: 58
+  - m_RefCount: 60
     m_Data: {fileID: 21300000, guid: 41c9893b97f00684b963964a800eff32, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 114
+  - m_RefCount: 116
     m_Data:
       e00: 1
       e01: 0
@@ -19026,7 +19025,7 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 56
     m_Data: {r: 1, g: 0, b: 1, a: 1}
-  - m_RefCount: 58
+  - m_RefCount: 60
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -19434,22 +19433,22 @@ PrefabInstance:
     - target: {fileID: 5340800900766525442, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5340800900766525442, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5340800900766525442, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5340800900766525442, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5340800900766525449, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
@@ -19714,32 +19713,32 @@ PrefabInstance:
     - target: {fileID: 5340800901098040995, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.556599
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5340800901098040995, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.556599
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5340800901098040995, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.556599
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5340800901098040995, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 24.556599
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8511037401954198691, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 428.00528
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8511037401954198691, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 463.1579
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8511037401954198691, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
@@ -21338,7 +21337,7 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 1302929393, guid: 0a5c646d13a95e5449b169800f4ff94a, type: 3}
       propertyPath: AttackList.Array.data[0].probability
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1302929393, guid: 0a5c646d13a95e5449b169800f4ff94a, type: 3}
       propertyPath: AttackList.Array.data[0].Cooldown
@@ -21351,10 +21350,14 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 1302929393, guid: 0a5c646d13a95e5449b169800f4ff94a, type: 3}
       propertyPath: AttackList.Array.data[1].probability
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1302929393, guid: 0a5c646d13a95e5449b169800f4ff94a, type: 3}
       propertyPath: AttackList.Array.data[1].Cooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302929393, guid: 0a5c646d13a95e5449b169800f4ff94a, type: 3}
+      propertyPath: AttackCooldown
       value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -10,11 +10,10 @@ public class BossController : MonoBehaviour
     {
         public Transform AttackPrefab;
         public float probability;
-        public float Cooldown;
         [HideInInspector]
-        public float LastAttack = -1;
+        public static float LastAttack = -1;
     }
-
+    public float AttackCooldown;
     public Attack[] AttackList;
     public int HealthRemaing;
     public UnityEvent OnDeath;
@@ -30,18 +29,18 @@ public class BossController : MonoBehaviour
     {
         if (!GetComponent<EnemyController>().stunned)
         {
+            float prob = Random.value;
             foreach (Attack attack in AttackList)
             {
-                float prob = Random.value;
-                if (attack.LastAttack < 0 || Time.time - attack.LastAttack > attack.Cooldown)
+                if (Attack.LastAttack < 0 || Time.time - Attack.LastAttack > AttackCooldown)
                 {
-                    attack.LastAttack = Time.time;
                     if (prob > 0 && prob < attack.probability)
                     {
+                        Attack.LastAttack = Time.time;
                         Instantiate(attack.AttackPrefab, transform.position + Vector3.up, Quaternion.identity);
                     }
-                    prob -= attack.probability;
                 }
+                prob -= attack.probability;
             }
         }
     }
