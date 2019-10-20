@@ -18,6 +18,13 @@ public class BossController : MonoBehaviour
     public Attack[] AttackList;
     public int HealthRemaing;
     public UnityEvent OnDeath;
+    public GameObject Smog;
+    public static BossController instance;
+
+    void Start()
+    {
+        instance = this;
+    }
 
     void Update()
     {
@@ -46,7 +53,7 @@ public class BossController : MonoBehaviour
            
 
             HealthRemaing--;
-                GetComponent<EnemyController>().LaunchPlayer(Vector2.up);
+                GetComponent<EnemyController>().LaunchPlayer(12*Vector2.up);
             SetStunned(5f);
             }
             else
@@ -58,11 +65,17 @@ public class BossController : MonoBehaviour
     }
     public void SetStunned(float duration)
     {
-        StartCoroutine(Stun(duration));
+        StopAllCoroutines();
+        StartCoroutine(StunAnimation(duration));
+        StartCoroutine(Respawn(duration));
     }
-    private IEnumerator Stun(float duration)
+    public void StartVolnurable(float duration)
     {
-        gameObject.layer = LayerMask.NameToLayer("IgnorePlayer");
+        StopCoroutine(StunAnimation(duration));
+        StartCoroutine(Volunarable(duration));
+    }
+    private IEnumerator StunAnimation(float duration)
+    {
         GetComponent<EnemyController>().stunned = true;
         Color currColor;
         SpriteRenderer renderer = GetComponentInChildren<SpriteRenderer>();
@@ -81,8 +94,25 @@ public class BossController : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
         GetComponent<EnemyController>().stunned = false;
-        gameObject.layer = LayerMask.NameToLayer("Enemy");
 
         GetComponentInChildren<Animator>().enabled = true;
+    }
+    private IEnumerator Respawn(float duration)
+    {
+        gameObject.layer = LayerMask.NameToLayer("IgnorePlayer");
+        yield return new WaitForSeconds(duration);
+        gameObject.layer = LayerMask.NameToLayer("Enemy");
+        GetComponent<EnemyController>().Invincible = true;
+        Smog.SetActive(true);
+    }
+    private IEnumerator Volunarable(float duration)
+    {
+        GetComponent<EnemyController>().Invincible = false;
+        GetComponent<EnemyController>().stunned = true;
+        Smog.SetActive(false);
+        yield return new WaitForSeconds(duration);
+        GetComponent<EnemyController>().stunned = false;
+        GetComponent<EnemyController>().Invincible = true;
+        Smog.SetActive(true);
     }
 }

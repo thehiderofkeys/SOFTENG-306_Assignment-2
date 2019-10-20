@@ -22,4 +22,8 @@ public class Projectile : MonoBehaviour
         }
         Destroy(gameObject);
     }
+    public void StunBoss()
+    {
+        BossController.instance.StartVolnurable(5);
+    }
 }
