@@ -13,7 +13,7 @@ public class BossController : MonoBehaviour
             if (HealthRemaing > 1)
             {
             HealthRemaing--;
-                GetComponent<EnemyController>().LaunchPlayer(PlayerController.instance);
+                GetComponent<EnemyController>().LaunchPlayer(Vector2.up);
             SetStunned(5f);
             }
             else

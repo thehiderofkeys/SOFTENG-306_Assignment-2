@@ -33,7 +33,7 @@ public class EnemyController : MonoBehaviour
         else if(hit.GetComponent<PlayerController>())
         {
             PlayerController player = hit.GetComponent<PlayerController>();
-            HitPlayer(player);
+            HitPlayer(new Vector2(direction * 12f, 12f));
         }
         else
         {
@@ -44,7 +44,7 @@ public class EnemyController : MonoBehaviour
         {
             if (Invincible)
             {
-                HitPlayer(hit.GetComponent<PlayerController>());
+                HitPlayer(new Vector2(direction * 12f, 12f));
             }
             else
             {
@@ -79,20 +79,26 @@ public class EnemyController : MonoBehaviour
         }
         return null;
     }
-    public void LaunchPlayer(PlayerController player)
+    public void LaunchPlayer(Vector2 launchDir)
     {
+        PlayerController player = PlayerController.instance;
         player.SetStunned(1);
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(direction * 12f, 12f);
+        rb.velocity = launchDir;
     }
-    public void HitPlayer(PlayerController player)
+    public void HitPlayer(Vector2 launchDir)
     {
+        PlayerController player = PlayerController.instance;
         if (lastHit < 0 || Time.time - lastHit > 0.5)
         {
             lastHit = Time.time;
-            LaunchPlayer(player);
+            LaunchPlayer(launchDir);
             player.SetInvincible(5);
             player.DecrementLives();
         }
+    }
+    public void HitPlayer()
+    {
+        HitPlayer(12*Vector2.up);
     }
 }
