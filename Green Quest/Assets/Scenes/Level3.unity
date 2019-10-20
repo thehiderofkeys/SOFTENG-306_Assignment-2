@@ -14062,17 +14062,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -26.800003
       objectReference: {fileID: 0}
-    - target: {fileID: 3962865802746446242, guid: b919dfed39b4e944d9e3135c2ca7b142,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2822579253944063505, guid: b919dfed39b4e944d9e3135c2ca7b142,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0c0b2730c41b84345929b04be13b7a0f,
-        type: 3}
     - target: {fileID: 5301554757897434762, guid: b919dfed39b4e944d9e3135c2ca7b142,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -14123,6 +14112,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemenyLife1
       objectReference: {fileID: 0}
+    - target: {fileID: 3962865802746446242, guid: b919dfed39b4e944d9e3135c2ca7b142,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822579253944063505, guid: b919dfed39b4e944d9e3135c2ca7b142,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0c0b2730c41b84345929b04be13b7a0f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b919dfed39b4e944d9e3135c2ca7b142, type: 3}
 --- !u!1 &301442414 stripped
@@ -16073,8 +16073,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032751215}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.56, y: 2.85, z: 0}
-  m_LocalScale: {x: -1, y: 0.75, z: 1}
+  m_LocalPosition: {x: -0.6, y: 2, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 493672956}
   m_RootOrder: 1
@@ -16135,7 +16135,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: dce56e7954d4bae4c8da7f7c7b35bf20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16143,7 +16143,7 @@ SpriteRenderer:
   m_Size: {x: 9, y: 7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1249287637
@@ -16157,16 +16157,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8052630286650064831, guid: 8d91dcc5fceb65646b4e707e60970fe3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8052630286650064831, guid: 8d91dcc5fceb65646b4e707e60970fe3,
-        type: 3}
-      propertyPath: exitGameScene
-      value: FailExitScreen
       objectReference: {fileID: 0}
     - target: {fileID: 8052630286650064824, guid: 8d91dcc5fceb65646b4e707e60970fe3,
         type: 3}
@@ -16222,6 +16212,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052630286650064831, guid: 8d91dcc5fceb65646b4e707e60970fe3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052630286650064831, guid: 8d91dcc5fceb65646b4e707e60970fe3,
+        type: 3}
+      propertyPath: exitGameScene
+      value: FailExitScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d91dcc5fceb65646b4e707e60970fe3, type: 3}
