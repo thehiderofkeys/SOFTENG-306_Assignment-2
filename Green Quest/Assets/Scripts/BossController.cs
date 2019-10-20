@@ -30,18 +30,18 @@ public class BossController : MonoBehaviour
     {
         if (!GetComponent<EnemyController>().stunned)
         {
+            float prob = Random.value;
             foreach (Attack attack in AttackList)
             {
-                float prob = Random.value;
                 if (attack.LastAttack < 0 || Time.time - attack.LastAttack > attack.Cooldown)
                 {
-                    attack.LastAttack = Time.time;
                     if (prob > 0 && prob < attack.probability)
                     {
+                        attack.LastAttack = Time.time;
                         Instantiate(attack.AttackPrefab, transform.position + Vector3.up, Quaternion.identity);
                     }
-                    prob -= attack.probability;
                 }
+                prob -= attack.probability;
             }
         }
     }

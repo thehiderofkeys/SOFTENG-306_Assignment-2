@@ -37,7 +37,7 @@ public class RandomSpawnController : MonoBehaviour
             Instantiate(seedlingPrefab, position, transform.rotation);
             return;
         }
-        else if(recursiveCount < 100)
+        else if(recursiveCount < 10)
         {
             recursiveCount++;
             SpawnGameObject(); //retry
