@@ -26,6 +26,7 @@ public class StarImages : MonoBehaviour
 
     public static void SetStars(int starsAchieved)
     {
+        Debug.Log(starsAchieved.ToString());
         for (int i = 0; i < starsAchieved; i++)
         {
             instance.starImages[i].sprite = instance.achievedStar;

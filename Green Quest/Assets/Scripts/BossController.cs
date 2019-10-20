@@ -12,13 +12,17 @@ public class BossController : MonoBehaviour
     {
             if (HealthRemaing > 1)
             {
+           
+
             HealthRemaing--;
                 GetComponent<EnemyController>().LaunchPlayer(PlayerController.instance);
             SetStunned(5f);
             }
             else
             {
-                OnDeath.Invoke();
+           
+
+            OnDeath.Invoke();
             }
     }
     public void SetStunned(float duration)
