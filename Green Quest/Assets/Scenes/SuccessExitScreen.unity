@@ -1536,8 +1536,6 @@ MonoBehaviour:
   nextLevel: {fileID: 1289028032}
   retry: {fileID: 184257555}
   home: {fileID: 1348529722}
-  nextScene: MainMenuScene
-  retryScene: Level1
   homeScene: MainMenuScene
 --- !u!114 &1901362083
 MonoBehaviour:
@@ -1557,7 +1555,6 @@ MonoBehaviour:
   - {fileID: 662892705}
   - {fileID: 614385142}
   - {fileID: 1812002679}
-  level: 1
 --- !u!1 &2081145784
 GameObject:
   m_ObjectHideFlags: 0
