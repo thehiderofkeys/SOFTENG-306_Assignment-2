@@ -15,6 +15,7 @@ public class RandomSpawnController : MonoBehaviour
     public float offsetX;
     public float offsetY;
     public static RandomSpawnController instance;
+    private int recursiveCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -31,14 +32,21 @@ public class RandomSpawnController : MonoBehaviour
         // Gets the random position of the drop. 
         RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down);
 
-        if (hit && hit.transform.gameObject.layer == LayerMask.NameToLayer("Ground") && !Physics2D.OverlapBox(position,new Vector2(1,1), 0))
+        if (hit && !Physics2D.OverlapBox(position,new Vector2(1,1), 0))
         {
             Instantiate(seedlingPrefab, position, transform.rotation);
+            return;
+        }
+        else if(recursiveCount < 100)
+        {
+            recursiveCount++;
+            SpawnGameObject(); //retry
         }
         else
         {
-            SpawnGameObject(); //retry
+            Instantiate(seedlingPrefab, position, transform.rotation);
         }
+        recursiveCount = 0;
     }
     void OnDrawGizmosSelected()
     {

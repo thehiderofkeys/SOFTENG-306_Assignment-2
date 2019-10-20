@@ -21,8 +21,9 @@ public class ThrowController : MonoBehaviour
         {
             sprite.enabled = false;
             Transform projectile = Instantiate(Prefab, transform.position, Quaternion.identity);
-            projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(transform.localScale.x * 3f, 3f); ;
-            //RandomSpawnController.instance.SpawnGameObject();
+            projectile.GetComponent<Projectile>().initVelocity = new Vector2(PlayerController.instance.direction * 12f, 3f);
+            projectile.GetComponent<Projectile>().enabled = true;
+            RandomSpawnController.instance.SpawnGameObject();
         }
         if (!sprite.enabled)
         {

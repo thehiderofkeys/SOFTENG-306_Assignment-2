@@ -136,7 +136,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207990766234110836}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 054e1829516c0da49a253cfc445e59e3, type: 3}
   m_Name: 
@@ -158,4 +158,4 @@ MonoBehaviour:
   TargetLayer:
     serializedVersion: 2
     m_Bits: 2048
-  initVelocity: {x: -0.3771049, y: 3.0000005}
+  initVelocity: {x: 0, y: 0}

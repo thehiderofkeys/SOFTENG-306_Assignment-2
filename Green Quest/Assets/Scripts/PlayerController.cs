@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private bool jump = false;
     private bool fall = false;
-    private int direction = 1;
+    public int direction = 1;
     private bool stunned = false;
     public string exitGameScene;
 
