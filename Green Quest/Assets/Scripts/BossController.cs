@@ -5,8 +5,39 @@ using UnityEngine.Events;
 
 public class BossController : MonoBehaviour
 {
+    [System.Serializable]
+    public class Attack
+    {
+        public Transform AttackPrefab;
+        public float probability;
+        public float Cooldown;
+        [HideInInspector]
+        public float LastAttack = -1;
+    }
+
+    public Attack[] AttackList;
     public int HealthRemaing;
     public UnityEvent OnDeath;
+
+    void Update()
+    {
+        if (!GetComponent<EnemyController>().stunned)
+        {
+            foreach (Attack attack in AttackList)
+            {
+                float prob = Random.value;
+                if (attack.LastAttack < 0 || Time.time - attack.LastAttack > attack.Cooldown)
+                {
+                    attack.LastAttack = Time.time;
+                    if (prob > 0 && prob < attack.probability)
+                    {
+                        Instantiate(attack.AttackPrefab, transform.position + Vector3.up, Quaternion.identity);
+                    }
+                    prob -= attack.probability;
+                }
+            }
+        }
+    }
 
     public void OnHit()
     {
@@ -51,5 +82,7 @@ public class BossController : MonoBehaviour
         }
         GetComponent<EnemyController>().stunned = false;
         gameObject.layer = LayerMask.NameToLayer("Enemy");
+
+        GetComponentInChildren<Animator>().enabled = true;
     }
 }
