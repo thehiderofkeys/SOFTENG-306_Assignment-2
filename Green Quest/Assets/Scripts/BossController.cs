@@ -15,7 +15,7 @@ public class BossController : MonoBehaviour
            
 
             HealthRemaing--;
-                GetComponent<EnemyController>().LaunchPlayer(PlayerController.instance);
+                GetComponent<EnemyController>().LaunchPlayer(Vector2.up);
             SetStunned(5f);
             }
             else
