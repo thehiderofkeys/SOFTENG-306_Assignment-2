@@ -2980,15 +2980,47 @@ Tilemap:
   - m_RefCount: 216
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.82720816, g: 0.5036374, b: 0.54782265, a: 1}
+    m_Data: {r: 0.855235, g: 0.44502887, b: 0.45824018, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8411948, g: 0.43142408, b: 0.52020913, a: 1}
+    m_Data: {r: 0.9804644, g: 0.45311278, b: 0.5599341, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.75153613, g: 0.31818104, b: 0.3758916, a: 1}
+    m_Data: {r: 0.8657028, g: 0.47615275, b: 0.4937563, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.8322802, g: 0.41808096, b: 0.44715953, a: 1}
+    m_Data: {r: 0.8032806, g: 0.5450289, b: 0.5800274, a: 1}
   - m_RefCount: 1
-    m_Data: {r: 0.86341834, g: 0.37334892, b: 0.5096419, a: 1}
+    m_Data: {r: 0.70215267, g: 0.44378817, b: 0.4872935, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -24, y: -20, z: 0}
