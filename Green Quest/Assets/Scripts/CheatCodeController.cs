@@ -42,6 +42,20 @@ public class CheatCodeController : MonoBehaviour
         // it means the entered sequence is correct
         if (index == code.Length)
         {
+
+            if (ScoreSystemController.instance.level == 3)
+            {
+                int trigger = BossHealthController.instance.numLivesReamining;
+                for (int i = 0; i < trigger; i++)
+                {
+                    Debug.Log("Decrement UI boss.");
+                    BossHealthController.instance.LoseLife();
+                }
+                Debug.Log("Boss Health is 0");
+                //BossController.instance.HealthRemaing = 0;
+                BossController.instance.OnDeath.Invoke();
+            }
+
             Debug.Log("Cheat code entered!");
             // Reset the index so this is only called once
             index = 0;
