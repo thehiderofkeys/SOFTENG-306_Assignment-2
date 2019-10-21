@@ -13,7 +13,7 @@ public class CheatCodeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Code is "787898", user needs to input this in the right order
+        // Code is "787898", user needs to input this in the right order without interruptions
         code = new string[] { "7", "8", "7", "8", "9", "8" };
         index = 0;
     }
@@ -63,16 +63,19 @@ public class CheatCodeController : MonoBehaviour
             // Transform the player position to the end of the level
             player.transform.SetPositionAndRotation(endPosition.position, new Quaternion(0, 0, 0, 0));
 
-            // Get the array of all taps and switches
+            // Get the array of all level-related objects (taps, lights, enemies, trees)
             GameObject[] array = GameObject.FindGameObjectsWithTag("Switch");
             GameObject[] enemyArray = GameObject.FindGameObjectsWithTag("Enemy");
             GameObject[] treeArray = GameObject.FindGameObjectsWithTag("Tree");
 
+            // Go through every tree
             foreach (GameObject tree in treeArray)
             {
+                // Plant the tree by invoking the on event
                 tree.GetComponent<InteractableController>().OnEvent.Invoke();
             }
 
+            // Go through every bulldozer and invoke the on stomp event to crush them
             foreach (GameObject enemy in enemyArray)
             {
                 if (enemy.GetComponent<Collider2D>().enabled)
