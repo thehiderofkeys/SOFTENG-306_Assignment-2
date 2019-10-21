@@ -70,7 +70,7 @@ public class BossController : MonoBehaviour
     }
     public void StartVolnurable(float duration)
     {
-        StopCoroutine(StunAnimation(duration));
+        StopAllCoroutines();
         StartCoroutine(Volunarable(duration));
     }
     private IEnumerator StunAnimation(float duration)
