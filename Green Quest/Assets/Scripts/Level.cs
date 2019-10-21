@@ -42,7 +42,6 @@ public class Level : MonoBehaviour{
        
         if (GetComponent<ScoreSystemController>().IsComplete())
         {
-            Debug.Log("Hi");
             GetComponent<ScoreSystemController>().CalculateStarsEarned();
             OnSuccess.Invoke();
              
@@ -50,7 +49,6 @@ public class Level : MonoBehaviour{
         }
         else
         {
-            Debug.Log("Bye!!");
             OnFail.Invoke();
         }
    

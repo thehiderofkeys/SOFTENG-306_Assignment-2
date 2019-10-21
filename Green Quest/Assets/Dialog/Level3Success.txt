@@ -1,7 +1,11 @@
 Event
 ShowEvilChoi
 EC
-OW.
+OW! That hurt.
+EC 
+What have you done?! You have erased all my evil work. 
+EC
+How dare you?
 G
 You did it, $NAME$!
 Event

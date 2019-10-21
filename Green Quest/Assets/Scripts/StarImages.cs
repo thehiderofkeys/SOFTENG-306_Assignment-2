@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//This is the UI class for the achievement stars that appear in each successful exit menu
 public class StarImages : MonoBehaviour
 {
     public Sprite achievedStar;
@@ -13,6 +14,7 @@ public class StarImages : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Setting up singleton
         if(instance != null)
         {
             Destroy(instance);
@@ -20,13 +22,14 @@ public class StarImages : MonoBehaviour
         instance = this; 
         
         List<int> starsForLevels = AchievementController.instance.GetStarsForLevels();
-        Debug.Log(starsForLevels);
+       
         SetStars(starsForLevels[level - 1]); 
     }
 
+    //Setting number of stars in exit screen
     public static void SetStars(int starsAchieved)
     {
-        Debug.Log(starsAchieved.ToString());
+        
         for (int i = 0; i < starsAchieved; i++)
         {
             instance.starImages[i].sprite = instance.achievedStar;
