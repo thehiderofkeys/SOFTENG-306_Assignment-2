@@ -50,6 +50,9 @@ All critical project documentation can be found in the project wiki. This includ
 * **Sprint Work Breakdown** Information about specific goals achieved by each team member for each sprint.
 * **Hand-Ins** Documentation specific to hand-in milestones.
 
+### Unity Version
+- 2018.4.9f1
+
 ### Contributors
 - Isabelle Beaumont
 - Yinhu Cui 
