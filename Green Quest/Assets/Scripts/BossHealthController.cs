@@ -10,8 +10,8 @@ public class BossHealthController : MonoBehaviour
     public List<Image> bossHealthImages;
     public Sprite FilledSkull;
     public Sprite EmptySkull;
-    private int numLivesReamining;
-    private static BossHealthController instance;
+    public int numLivesReamining;
+    public static BossHealthController instance;
 
 
     void Start()
