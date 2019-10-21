@@ -17351,7 +17351,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 0c0e900b1954f32468855b8eac7d9c48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -17371,7 +17371,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246656410}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.98, y: -5.15, z: 0}
+  m_LocalPosition: {x: -3.9, y: -5.2, z: 0}
   m_LocalScale: {x: 1.6654218, y: 1.6943299, z: 1.606}
   m_Children: []
   m_Father: {fileID: 1285295291}
@@ -17680,11 +17680,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 0c0b2730c41b84345929b04be13b7a0f,
         type: 3}
-    - target: {fileID: 4785599439580811569, guid: b919dfed39b4e944d9e3135c2ca7b142,
-        type: 3}
-      propertyPath: m_ChildAlignment
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3962865802597757438, guid: b919dfed39b4e944d9e3135c2ca7b142,
         type: 3}
       propertyPath: m_UiScaleMode
@@ -17699,6 +17694,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ReferenceResolution.y
       value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 4785599439580811569, guid: b919dfed39b4e944d9e3135c2ca7b142,
+        type: 3}
+      propertyPath: m_ChildAlignment
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b919dfed39b4e944d9e3135c2ca7b142, type: 3}
@@ -17878,14 +17878,6 @@ CompositeCollider2D:
         Y: 40000000
       - X: -30000000
         Y: 40000000
-    - - X: 100000000
-        Y: 30000000
-      - X: 80000000
-        Y: 30000000
-      - X: 80000000
-        Y: 20000000
-      - X: 100000000
-        Y: 20000000
     - - X: 300000000
         Y: 30000000
       - X: 280000000
@@ -17894,29 +17886,21 @@ CompositeCollider2D:
         Y: 20000000
       - X: 300000000
         Y: 20000000
-    - - X: -10000000
-        Y: 20000000
-      - X: -30000000
-        Y: 20000000
-      - X: -30000000
-        Y: 10000000
-      - X: -10000000
-        Y: 10000000
-    - - X: 110000000
+    - - X: 100000000
+        Y: 30000000
+      - X: 80000000
+        Y: 30000000
+      - X: 80000000
         Y: 20000000
       - X: 100000000
         Y: 20000000
-      - X: 100000000
-        Y: 10000000
-      - X: 110000000
-        Y: 10000000
-    - - X: 220000000
+    - - X: 460000000
         Y: 20000000
-      - X: 160000000
+      - X: 440000000
         Y: 20000000
-      - X: 160000000
+      - X: 440000000
         Y: 10000000
-      - X: 220000000
+      - X: 460000000
         Y: 10000000
     - - X: 280000000
         Y: 20000000
@@ -17926,13 +17910,29 @@ CompositeCollider2D:
         Y: 10000000
       - X: 280000000
         Y: 10000000
-    - - X: 460000000
+    - - X: 220000000
         Y: 20000000
-      - X: 440000000
+      - X: 160000000
         Y: 20000000
-      - X: 440000000
+      - X: 160000000
         Y: 10000000
-      - X: 460000000
+      - X: 220000000
+        Y: 10000000
+    - - X: 110000000
+        Y: 20000000
+      - X: 100000000
+        Y: 20000000
+      - X: 100000000
+        Y: 10000000
+      - X: 110000000
+        Y: 10000000
+    - - X: -10000000
+        Y: 20000000
+      - X: -30000000
+        Y: 20000000
+      - X: -30000000
+        Y: 10000000
+      - X: -10000000
         Y: 10000000
     - - X: -60000000
         Y: 20000000
@@ -17942,14 +17942,6 @@ CompositeCollider2D:
         Y: 10000000
       - X: -60000000
         Y: 10000000
-    - - X: 70000000
-        Y: 10000000
-      - X: 50000000
-        Y: 10000000
-      - X: 50000000
-        Y: 0
-      - X: 70000000
-        Y: 0
     - - X: 330000000
         Y: 10000000
       - X: 310000000
@@ -17958,14 +17950,14 @@ CompositeCollider2D:
         Y: 0
       - X: 330000000
         Y: 0
-    - - X: 260000000
-        Y: -10000000
-      - X: 240000000
-        Y: -10000000
-      - X: 240000000
-        Y: -20000000
-      - X: 260000000
-        Y: -20000000
+    - - X: 70000000
+        Y: 10000000
+      - X: 50000000
+        Y: 10000000
+      - X: 50000000
+        Y: 0
+      - X: 70000000
+        Y: 0
     - - X: 440000000
         Y: -10000000
       - X: 420000000
@@ -17981,6 +17973,14 @@ CompositeCollider2D:
       - X: 350000000
         Y: -20000000
       - X: 370000000
+        Y: -20000000
+    - - X: 260000000
+        Y: -10000000
+      - X: 240000000
+        Y: -10000000
+      - X: 240000000
+        Y: -20000000
+      - X: 260000000
         Y: -20000000
     - - X: 140000000
         Y: -10000000
@@ -18024,50 +18024,46 @@ CompositeCollider2D:
       - {x: -5, y: 5}
       - {x: -5, y: 4}
       - {x: -3, y: 4}
-    - - {x: 10, y: 3}
-      - {x: 8, y: 3}
-      - {x: 8, y: 2}
-      - {x: 10, y: 2}
     - - {x: 30, y: 3}
       - {x: 28, y: 3}
       - {x: 28, y: 2}
       - {x: 30, y: 2}
-    - - {x: -1, y: 2}
-      - {x: -3, y: 2}
-      - {x: -3, y: 1}
-      - {x: -1, y: 1}
-    - - {x: 11, y: 2}
+    - - {x: 10, y: 3}
+      - {x: 8, y: 3}
+      - {x: 8, y: 2}
       - {x: 10, y: 2}
-      - {x: 10, y: 1}
-      - {x: 11, y: 1}
-    - - {x: 22, y: 2}
-      - {x: 16, y: 2}
-      - {x: 16, y: 1}
-      - {x: 22, y: 1}
-    - - {x: 28, y: 2}
-      - {x: 27, y: 2}
-      - {x: 27, y: 1}
-      - {x: 28, y: 1}
     - - {x: 46, y: 2}
       - {x: 44, y: 2}
       - {x: 44, y: 1}
       - {x: 46, y: 1}
+    - - {x: 28, y: 2}
+      - {x: 27, y: 2}
+      - {x: 27, y: 1}
+      - {x: 28, y: 1}
+    - - {x: 22, y: 2}
+      - {x: 16, y: 2}
+      - {x: 16, y: 1}
+      - {x: 22, y: 1}
+    - - {x: 11, y: 2}
+      - {x: 10, y: 2}
+      - {x: 10, y: 1}
+      - {x: 11, y: 1}
+    - - {x: -1, y: 2}
+      - {x: -3, y: 2}
+      - {x: -3, y: 1}
+      - {x: -1, y: 1}
     - - {x: -6, y: 2}
       - {x: -8, y: 2}
       - {x: -8, y: 1}
       - {x: -6, y: 1}
-    - - {x: 7, y: 1}
-      - {x: 5, y: 1}
-      - {x: 5, y: 0}
-      - {x: 7, y: 0}
     - - {x: 33, y: 1}
       - {x: 31, y: 1}
       - {x: 31, y: 0}
       - {x: 33, y: 0}
-    - - {x: 26, y: -1}
-      - {x: 24, y: -1}
-      - {x: 24, y: -2}
-      - {x: 26, y: -2}
+    - - {x: 7, y: 1}
+      - {x: 5, y: 1}
+      - {x: 5, y: 0}
+      - {x: 7, y: 0}
     - - {x: 44, y: -1}
       - {x: 42, y: -1}
       - {x: 42, y: -2}
@@ -18076,6 +18072,10 @@ CompositeCollider2D:
       - {x: 35, y: -1}
       - {x: 35, y: -2}
       - {x: 37, y: -2}
+    - - {x: 26, y: -1}
+      - {x: 24, y: -1}
+      - {x: 24, y: -2}
+      - {x: 26, y: -2}
     - - {x: 14, y: -1}
       - {x: 12, y: -1}
       - {x: 12, y: -2}
@@ -19777,22 +19777,22 @@ PrefabInstance:
     - target: {fileID: 5340800900766525442, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5340800900766525442, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5340800900766525442, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5340800900766525442, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5340800900766525449, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
@@ -20232,27 +20232,27 @@ PrefabInstance:
     - target: {fileID: 5340800901098040995, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 24.556599
       objectReference: {fileID: 0}
     - target: {fileID: 5340800901098040995, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 24.556599
       objectReference: {fileID: 0}
     - target: {fileID: 5340800901098040995, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 24.556599
       objectReference: {fileID: 0}
     - target: {fileID: 5340800901098040995, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 24.556599
       objectReference: {fileID: 0}
     - target: {fileID: 8511037401954198691, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 434.58646
       objectReference: {fileID: 0}
     - target: {fileID: 8511037401954198691, guid: 69b84aa8ef987ab42adf0cefd859ca3e,
         type: 3}
@@ -20662,7 +20662,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: c7fb7577a6e544df883a099e5394eefa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -21021,6 +21021,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8052630286650064831, guid: 8d91dcc5fceb65646b4e707e60970fe3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052630286650064831, guid: 8d91dcc5fceb65646b4e707e60970fe3,
+        type: 3}
+      propertyPath: exitGameScene
+      value: FailExitScreen
+      objectReference: {fileID: 0}
     - target: {fileID: 8052630286650064824, guid: 8d91dcc5fceb65646b4e707e60970fe3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21075,16 +21085,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8052630286650064831, guid: 8d91dcc5fceb65646b4e707e60970fe3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8052630286650064831, guid: 8d91dcc5fceb65646b4e707e60970fe3,
-        type: 3}
-      propertyPath: exitGameScene
-      value: FailExitScreen
       objectReference: {fileID: 0}
     - target: {fileID: 7415675869125919379, guid: 8d91dcc5fceb65646b4e707e60970fe3,
         type: 3}
@@ -21799,9 +21799,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: eb76c9daa82bf475f91ed075c7088dd1, type: 3}
-  m_Color: {r: 0.764151, g: 0.07487448, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -22092,6 +22092,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2404376902249325036, guid: 2db155e36444f5b4da73812cc48af867,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4463105413021425231, guid: 2db155e36444f5b4da73812cc48af867,
         type: 3}
       propertyPath: m_Sprite
@@ -22196,11 +22201,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4db089d8c01295b4ea3cb3807e6f67d3,
         type: 3}
-    - target: {fileID: 2404376902249325036, guid: 2db155e36444f5b4da73812cc48af867,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2db155e36444f5b4da73812cc48af867, type: 3}
 --- !u!1 &1667851081 stripped
@@ -22296,7 +22296,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: df0f1027706fa714c95699ab7294e7f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -24199,7 +24199,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: df0f1027706fa714c95699ab7294e7f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
