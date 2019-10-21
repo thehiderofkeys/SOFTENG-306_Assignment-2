@@ -9,13 +9,25 @@ public class Fader : MonoBehaviour {
     public float opacity; //current opacity, Read only
     public Image image; //The image object selected Read only.
 
+    void SetAnimation(bool Fade) {
+        GetComponent<Animator>().SetBool("Fade", Fade);
+    }
+
     public void StartFadeIn(float speed) {
+        if (GetComponent<Animator>()) {
+            SetAnimation(true);
+            return;
+        }
         if(image == null) //Set the image if not already set.
             image = GetComponent<Image>();
         StartCoroutine(FadeIn(speed)); //start fadeing in
     }
 
     public void StartFadeOut(float speed) {
+        if (GetComponent<Animator>()) {
+            SetAnimation(false);
+            return;
+        }
         if (image == null) // set the image if not already set.
             image = GetComponent<Image>();
         StartCoroutine(FadeOut(speed)); //start fading out
