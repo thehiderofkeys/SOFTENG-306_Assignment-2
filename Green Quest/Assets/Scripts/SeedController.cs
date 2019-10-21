@@ -7,6 +7,7 @@ public class SeedController : MonoBehaviour
 {
     public void OnPickUp()
     {
+        GameObject.FindGameObjectWithTag("Item").GetComponent<AudioSource>().Play();
         GameObject.FindGameObjectWithTag("Item").GetComponent<SpriteRenderer>().enabled = true;
         Tree.SetTreeEnabled(true);
         Destroy(gameObject);
