@@ -108,10 +108,12 @@ public class BossController : MonoBehaviour
     {
         GetComponent<EnemyController>().Invincible = false;
         GetComponent<EnemyController>().stunned = true;
+        GetComponentInChildren<Animator>().enabled = false;
         Smog.SetActive(false);
         yield return new WaitForSeconds(duration);
         GetComponent<EnemyController>().stunned = false;
         GetComponent<EnemyController>().Invincible = true;
+        GetComponentInChildren<Animator>().enabled = true;
         Smog.SetActive(true);
     }
 }
