@@ -19915,8 +19915,10 @@ MonoBehaviour:
   parallaxElements:
   - background: {fileID: 875723043}
     seperation: 0.5
-  - background: {fileID: 1213634770}
+  - background: {fileID: 1604643530}
     seperation: 0.75
+  - background: {fileID: 1213634770}
+    seperation: 1
 --- !u!4 &843724261
 Transform:
   m_ObjectHideFlags: 0
@@ -21044,6 +21046,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fc7d92c57dbf434d9b6ff4e9b7d2864, type: 3}
+--- !u!4 &1604643530 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2404376902249325043, guid: 2db155e36444f5b4da73812cc48af867,
+    type: 3}
+  m_PrefabInstance: {fileID: 1666564530}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1620879739
 GameObject:
   m_ObjectHideFlags: 0
@@ -21378,17 +21386,22 @@ PrefabInstance:
     - target: {fileID: 2404376901749578072, guid: 2db155e36444f5b4da73812cc48af867,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.3803922
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2404376901749578072, guid: 2db155e36444f5b4da73812cc48af867,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.3803922
+      value: 0.9764151
       objectReference: {fileID: 0}
     - target: {fileID: 2404376901749578072, guid: 2db155e36444f5b4da73812cc48af867,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.3803922
+      value: 0.9764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404376901749578072, guid: 2db155e36444f5b4da73812cc48af867,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2404376902857501546, guid: 2db155e36444f5b4da73812cc48af867,
         type: 3}
