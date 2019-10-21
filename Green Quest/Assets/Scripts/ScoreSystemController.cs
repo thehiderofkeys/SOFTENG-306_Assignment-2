@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//This class is in charge of the logic for the scoring system
 public class ScoreSystemController : MonoBehaviour
 {
     private bool isComplete;
@@ -56,7 +57,7 @@ public class ScoreSystemController : MonoBehaviour
         return this.objectives;
     }
 
-
+    //Calculates the number of stars earned for each level
     public void CalculateStarsEarned()
     {
         int starsEarned = 0;
@@ -75,7 +76,7 @@ public class ScoreSystemController : MonoBehaviour
                 {
                     
                     count = 0;
-                    Debug.Log("Count is: " + count.ToString());
+                    
                 }
                 
             }
@@ -89,7 +90,7 @@ public class ScoreSystemController : MonoBehaviour
                 {
                    
                     count = 1;
-                    Debug.Log("Count is: " + count.ToString());
+                    
                 }
             }
             else if(o.GetMaxTarget() - o.GetCount() == 1)
@@ -102,7 +103,7 @@ public class ScoreSystemController : MonoBehaviour
                 {
                     
                     count = 2;
-                    Debug.Log("Count is: " + count.ToString());
+                    
                 }
             }
             else if (o.GetMaxTarget() - o.GetCount() == 0)
@@ -115,7 +116,7 @@ public class ScoreSystemController : MonoBehaviour
                 {
                     
                     count = 3;
-                    Debug.Log("Count is: " + count.ToString());
+                    
                 }
             }
             starsEarned = count; 
@@ -127,6 +128,7 @@ public class ScoreSystemController : MonoBehaviour
 
 }
 
+//Objective class represents an objective the user needs to complete, for example: lightswitches to turn off or trees to plant
 [System.Serializable] 
 public class Objective
 {
@@ -150,12 +152,12 @@ public class Objective
         return maxTarget;
     }
 
+    // Increment the count when the player hits it
     public void IncrementCount()
     {
-        // Call this method when a switch has been activated
         count++;
         SetText(count);
-        //print("Increment");
+        
     }
 
     // Decrement the count when the player hits it.
@@ -168,10 +170,6 @@ public class Objective
     void SetText(int score)
     {
         scoreText.text = score.ToString() + " / " + maxTarget.ToString();
-       // if (score >= maxTarget)
-      //  {
-      //
-       //     scoreText.text = "Complete!";
-      //  }
+       
     }
 }

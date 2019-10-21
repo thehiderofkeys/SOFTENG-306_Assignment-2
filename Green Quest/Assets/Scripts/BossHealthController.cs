@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+// This class is used to populate the HUD images for boss health in level 3
 public class BossHealthController : MonoBehaviour
 {
 
@@ -10,8 +12,8 @@ public class BossHealthController : MonoBehaviour
     public List<Image> bossHealthImages;
     public Sprite FilledSkull;
     public Sprite EmptySkull;
-    private int numLivesReamining;
-    private static BossHealthController instance;
+    public int numLivesReamining;
+    public static BossHealthController instance;
 
 
     void Start()
@@ -21,6 +23,7 @@ public class BossHealthController : MonoBehaviour
     }
 
 
+    // This method is called to update the HUD to display how many lives the boss has reamining
     public void LoseLife()
     {
         
