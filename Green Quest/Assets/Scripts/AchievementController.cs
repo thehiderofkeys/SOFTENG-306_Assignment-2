@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class AchievementController : MonoBehaviour
 {
     public static List<int> starsForLevels =  new List<int>() { 0, 0, 0 };
-   // public Sprite achievedStar;
-   // public Sprite notAchievedStar;
     public static AchievementController instance; 
 
     void Start()

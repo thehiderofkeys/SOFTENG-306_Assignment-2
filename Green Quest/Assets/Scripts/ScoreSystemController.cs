@@ -152,12 +152,12 @@ public class Objective
         return maxTarget;
     }
 
+    // Increment the count when the player hits it
     public void IncrementCount()
     {
-        // Call this method when a switch has been activated
         count++;
         SetText(count);
-        //print("Increment");
+        
     }
 
     // Decrement the count when the player hits it.
