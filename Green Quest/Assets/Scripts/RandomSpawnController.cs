@@ -24,6 +24,7 @@ public class RandomSpawnController : MonoBehaviour
         instance = this;
     }
 
+    // This method spawns the objects randomly by taking an offset and adding it to the players position. 
     public void SpawnGameObject()
     {
         Debug.Log("In Spawn game obj");
@@ -33,6 +34,7 @@ public class RandomSpawnController : MonoBehaviour
         // Gets the random position of the drop. 
         RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down,100f, layerMask);
 
+        // Ensures that the spawn point isn the same as a bad point (Like a hole in the game)
         if (hit && !Physics2D.OverlapBox(position,new Vector2(1,1), 0, layerMask))
         {
             Instantiate(seedlingPrefab, position, transform.rotation);
@@ -50,6 +52,7 @@ public class RandomSpawnController : MonoBehaviour
         }
         recursiveCount = 0;
     }
+    // used for debugging.
     void OnDrawGizmosSelected()
     {
         Gizmos.DrawLine(position, position + 10 * Vector2.down);

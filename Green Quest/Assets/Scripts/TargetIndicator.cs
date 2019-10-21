@@ -16,6 +16,8 @@ public class TargetIndicator : MonoBehaviour
             visual.enabled = false;
         }
     }
+
+    // If the object is not within the camera frame, produce an arrow that shows where the seedling is. 
     void LateUpdate()
     {
         GameObject target = GameObject.FindGameObjectWithTag(TagName);
