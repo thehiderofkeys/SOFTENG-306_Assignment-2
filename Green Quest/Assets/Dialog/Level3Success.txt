@@ -1,3 +1,7 @@
+Event
+ShowEvilChoi
+EC
+OW.
 G
 You did it, $NAME$!
 Event
