@@ -21,11 +21,11 @@ Greta_Smile
 Event 
 Choi_Wow
 P
-You are right, all the small achievements has made me more aware about climate change and made me stronger. 
+You are right, all the small achievements have made me more aware about climate change and made me stronger. 
 Event 
 Greta_Smile
 G
-That is ths spirit $NAME$. 
+That's the spirit $NAME$. 
 Event 
 Greta_Wow
 G
