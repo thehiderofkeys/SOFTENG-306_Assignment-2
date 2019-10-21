@@ -14,7 +14,7 @@ public class RandomSpawnController : MonoBehaviour
     Vector2 position;
 
     public float offsetX;
-    public float offsetY;
+    public float spawnHeight;
     public static RandomSpawnController instance;
     private int recursiveCount = 0;
 
@@ -29,7 +29,7 @@ public class RandomSpawnController : MonoBehaviour
         Debug.Log("In Spawn game obj");
         float playerPositionX = player.position.x;
         float playerPositionY = player.position.y;
-        position = player.position + new Vector3((Random.value-0.5f) * offsetX, offsetY);
+        position = new Vector3((Random.value-0.5f) * offsetX + player.position.x, spawnHeight);
         // Gets the random position of the drop. 
         RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down,100f, layerMask);
 
