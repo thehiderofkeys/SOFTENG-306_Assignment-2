@@ -25,7 +25,7 @@ Greta_Smile
 Event 
 Choi_Wow
 P
-Wow, that’s amazing, we need to save the trees.
+Wow, that's amazing, we need to save the trees.
 Event 
 Greta_Wow
 G
