@@ -201,27 +201,6 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   Smog: {fileID: 1032751215}
---- !u!114 &4181685557615230407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2448419392346307867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd77df41cdbbf3f4592fa4318193b035, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bossHealthImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  FilledSkull: {fileID: 21300000, guid: 0c0b2730c41b84345929b04be13b7a0f, type: 3}
-  EmptySkull: {fileID: 21300000, guid: 4515e9946604ec249a20497a6101a273, type: 3}
 --- !u!1001 &5336030706487032954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -288,6 +267,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779946163374700413, guid: 93b45cc839646764c92302e26433594b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779946163374700413, guid: 93b45cc839646764c92302e26433594b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779946163374700413, guid: 93b45cc839646764c92302e26433594b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779946163374700413, guid: 93b45cc839646764c92302e26433594b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7779946164174373247, guid: 93b45cc839646764c92302e26433594b,
         type: 3}
@@ -363,26 +362,6 @@ PrefabInstance:
         type: 3}
       propertyPath: Invincible
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779946163374700413, guid: 93b45cc839646764c92302e26433594b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779946163374700413, guid: 93b45cc839646764c92302e26433594b,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779946163374700413, guid: 93b45cc839646764c92302e26433594b,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779946163374700413, guid: 93b45cc839646764c92302e26433594b,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7779946163374700412, guid: 93b45cc839646764c92302e26433594b,
         type: 3}
